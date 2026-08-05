@@ -38,6 +38,7 @@ yarn-error.log*
 
 # local tooling cache
 .impeccable/
+.claude/
 
 # raw photo dumps (originals) — processed copies live in public/images/
 /summer camp/
