@@ -50,7 +50,7 @@ export default function Footer() {
             Meets Weekly
           </p>
           <p className="mt-4 text-sm leading-relaxed text-purple-200">
-            {siteConfig.meeting.day}s, {siteConfig.meeting.time}
+            {siteConfig.meeting.day}, {siteConfig.meeting.time}
             <br />
             {siteConfig.meeting.locationName}
             <br />

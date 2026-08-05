@@ -4,9 +4,7 @@ import { siteConfig } from "./site-config";
 const currentYear = new Date().getFullYear();
 
 /**
- * Homepage "quick stats" strip. These are placeholder numbers — swap in
- * real figures before launch (ask your Committee Chair / advancement
- * coordinator for exact counts).
+ * Homepage quick stats. Sourced from t65.org + troop leadership as of Aug 2026.
  */
 export const quickStats: QuickStat[] = [
   {
@@ -15,20 +13,17 @@ export const quickStats: QuickStat[] = [
     detail: `Chartered ${siteConfig.foundedYear}`,
   },
   {
-    // TODO: confirm current active roster size
     label: "Active Scouts",
-    value: "30+",
+    value: "40",
   },
   {
-    // TODO: confirm lifetime Eagle Scout count
     label: "Eagle Scouts",
-    value: "120+",
+    value: "200+",
     detail: `Since ${siteConfig.foundedYear}`,
   },
   {
-    // TODO: confirm outings/events per year
-    label: "Outings Per Year",
-    value: "12+",
-    detail: "Camping, service, high adventure",
+    label: "Patrols",
+    value: "4",
+    detail: "Sabertooths, Eagles, Diamondbacks, Flaming Falcons",
   },
 ];

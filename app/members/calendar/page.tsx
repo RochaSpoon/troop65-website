@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { events } from "@/content/events";
+import { siteConfig } from "@/content/site-config";
 
 export const metadata: Metadata = {
   title: "Members — Calendar",
@@ -44,6 +45,24 @@ export default function MembersCalendarPage() {
             >
               Sign Up →
             </a>
+          </div>
+        ))}
+      </div>
+
+      <h2 className="mt-14 font-display text-xl font-extrabold uppercase tracking-tight text-ink-900">
+        Recurring Meetings
+      </h2>
+      <div className="mt-4 divide-y divide-stone-300 rounded-sm border border-stone-300 bg-white">
+        <div className="flex flex-wrap items-center justify-between gap-4 p-5">
+          <p className="font-display text-base font-bold uppercase text-ink-900">Troop Meeting</p>
+          <p className="text-sm text-stone-600">
+            {siteConfig.meeting.day}, {siteConfig.meeting.time}
+          </p>
+        </div>
+        {siteConfig.otherMeetings.map((m) => (
+          <div key={m.label} className="flex flex-wrap items-center justify-between gap-4 p-5">
+            <p className="font-display text-base font-bold uppercase text-ink-900">{m.label}</p>
+            <p className="text-sm text-stone-600">{m.schedule}</p>
           </div>
         ))}
       </div>

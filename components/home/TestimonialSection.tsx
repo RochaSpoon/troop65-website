@@ -1,3 +1,4 @@
+import Image from "next/image";
 import PatchMark from "@/components/ui/PatchMark";
 import { testimonials } from "@/content/testimonials";
 
@@ -6,21 +7,29 @@ export default function TestimonialSection() {
   if (!quote) return null;
 
   return (
-    <section className="bg-purple-950 py-20 sm:py-28">
-      <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
-        <span className="font-display text-8xl leading-none text-gold-500/40" aria-hidden="true">
-          &ldquo;
-        </span>
-        <p className="mx-auto -mt-6 max-w-3xl font-display text-3xl font-medium leading-tight text-parchment-50 sm:text-4xl">
-          {quote.quote}
-        </p>
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <PatchMark size={32} tone="gold" />
-          <div className="text-left">
-            <p className="font-display text-sm font-bold uppercase tracking-wide text-parchment-50">
-              {quote.name}
+    <section className="bg-purple-950">
+      <div className="mx-auto grid max-w-7xl lg:grid-cols-2">
+        <div className="relative aspect-[4/3] min-h-[320px] lg:aspect-auto lg:h-[480px] xl:h-[540px]">
+          <Image
+            src="/images/activities/camp-baker-2026/camp-baker-20.jpg"
+            alt="Troop 65 Scouts at Camp Baker"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
+        </div>
+        <div className="flex items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-14 xl:px-20">
+          <div>
+            <PatchMark size={32} tone="gold" />
+            <p className="mt-6 font-display text-2xl font-medium leading-tight text-parchment-50 sm:text-3xl">
+              &ldquo;{quote.quote}&rdquo;
             </p>
-            <p className="text-xs text-purple-300">{quote.role}</p>
+            <div className="mt-6">
+              <p className="font-display text-sm font-bold uppercase tracking-wide text-gold-400">
+                {quote.name}
+              </p>
+              <p className="text-xs text-purple-300">{quote.role}</p>
+            </div>
           </div>
         </div>
       </div>

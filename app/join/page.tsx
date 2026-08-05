@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const meetingFlow = [
-  { time: "7:00", label: "Opening", body: "Flag ceremony, announcements, run by the Senior Patrol Leader." },
-  { time: "7:10", label: "Patrol Time", body: "Patrols split off for skill instruction, planning, or advancement work." },
-  { time: "7:50", label: "Troop Activity", body: "A game, challenge, or whole-troop activity — usually the loudest 20 minutes of the week." },
+  { time: "7:30", label: "Opening", body: "Flag ceremony, announcements, run by the Senior Patrol Leader." },
+  { time: "7:40", label: "Patrol Time", body: "Patrols split off for skill instruction, planning, or advancement work." },
+  { time: "8:10", label: "Troop Activity", body: "A game, challenge, or whole-troop activity — usually the loudest 20 minutes of the week." },
   { time: "8:20", label: "Closing", body: "Announcements, upcoming event sign-ups, closing flag ceremony." },
 ];
 
@@ -63,15 +63,15 @@ export default function JoinPage() {
             <div>
               <SectionHeading eyebrow="Where" title="Find us" />
               <p className="mt-5 text-sm leading-relaxed text-ink-700">
-                {siteConfig.meeting.day}s, {siteConfig.meeting.time}
+                {siteConfig.meeting.day}, {siteConfig.meeting.time}
                 <br />
                 {siteConfig.meeting.locationName}
                 <br />
                 {siteConfig.meeting.address}
               </p>
               <p className="mt-3 text-sm leading-relaxed text-ink-700">
-                Park in the main lot and look for a Scout in a purple neckerchief near
-                the entrance — they&apos;ll point you to where we meet.
+                Look for a Scout in a purple neckerchief near the entrance —
+                they&apos;ll point you to where we meet.
               </p>
             </div>
           </div>

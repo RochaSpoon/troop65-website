@@ -3,6 +3,7 @@ import Image from "next/image";
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CtaBand from "@/components/home/CtaBand";
+import PatrolsSection from "@/components/home/PatrolsSection";
 import { adultLeaders, youthPositions } from "@/content/leadership";
 
 export const metadata: Metadata = {
@@ -49,7 +50,7 @@ export default function LeadershipPage() {
           <SectionHeading
             eyebrow="Youth Leadership"
             title="How the boy-led structure works"
-            subtitle="Positions rotate every six months (or per patrol), which is why we describe this by role, not by name."
+            subtitle="Real names, current as of this program year — positions rotate roughly every six months at troop elections."
             tone="gold"
             align="center"
           />
@@ -69,7 +70,7 @@ export default function LeadershipPage() {
                 </div>
                 <div>
                   <p className="font-display text-[11px] font-bold uppercase tracking-[0.14em] text-gold-400">
-                    Reports to {position.reportsTo}
+                    {position.name ? position.name : `Reports to ${position.reportsTo}`}
                   </p>
                   <p className="mt-1.5 text-sm leading-relaxed text-purple-200">
                     {position.description}
@@ -80,6 +81,8 @@ export default function LeadershipPage() {
           </div>
         </div>
       </section>
+
+      <PatrolsSection />
 
       <CtaBand />
     </>

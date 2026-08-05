@@ -39,6 +39,9 @@ yarn-error.log*
 # local tooling cache
 .impeccable/
 
+# raw photo dumps (originals) — processed copies live in public/images/
+/summer camp/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts

@@ -43,6 +43,8 @@ export interface YouthPosition {
   title: string;
   reportsTo: string;
   description: string;
+  /** Current holder, when known. Omit to describe the role generically. */
+  name?: string;
 }
 
 export interface Testimonial {

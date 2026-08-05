@@ -29,7 +29,7 @@ export default function ContactPage() {
                   When
                 </dt>
                 <dd className="mt-1 text-base text-ink-900">
-                  {siteConfig.meeting.day}s, {siteConfig.meeting.time}
+                  {siteConfig.meeting.day}, {siteConfig.meeting.time}
                 </dd>
               </div>
               <div>
@@ -52,21 +52,25 @@ export default function ContactPage() {
                   </a>
                 </dd>
               </div>
+              {siteConfig.contact.phone ? (
+                <div>
+                  <dt className="font-display text-xs font-bold uppercase tracking-[0.14em] text-gold-600">
+                    Phone
+                  </dt>
+                  <dd className="mt-1 text-base text-ink-900">
+                    <a href={`tel:${siteConfig.contact.phone.replace(/[^\d+]/g, "")}`} className="text-purple-700 hover:text-purple-600">
+                      {siteConfig.contact.phone}
+                    </a>
+                  </dd>
+                </div>
+              ) : null}
               <div>
                 <dt className="font-display text-xs font-bold uppercase tracking-[0.14em] text-gold-600">
-                  Phone
+                  Council &amp; District
                 </dt>
                 <dd className="mt-1 text-base text-ink-900">
-                  <a href={`tel:${siteConfig.contact.phone.replace(/[^\d+]/g, "")}`} className="text-purple-700 hover:text-purple-600">
-                    {siteConfig.contact.phone}
-                  </a>
+                  {siteConfig.council}, {siteConfig.district}
                 </dd>
-              </div>
-              <div>
-                <dt className="font-display text-xs font-bold uppercase tracking-[0.14em] text-gold-600">
-                  Chartered By
-                </dt>
-                <dd className="mt-1 text-base text-ink-900">{siteConfig.council}</dd>
               </div>
             </dl>
           </div>

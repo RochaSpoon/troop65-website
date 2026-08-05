@@ -71,8 +71,8 @@ export default function AboutPage() {
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm shadow-patch-lg">
             <Image
-              src="https://placehold.co/1200x1500/610081/f7efd9.png?text=Photo%3A+PLC+planning+meeting"
-              alt="TODO: replace with a real photo of the Patrol Leaders' Council planning a campout"
+              src="/images/activities/camp-baker-2026/camp-baker-34.jpg"
+              alt="Two Troop 65 Scouts in full uniform at the Amtrak platform, traveling to Camp Baker"
               fill
               className="object-cover"
             />

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { pastEvents } from "@/content/events";
+import { photoHighlights } from "@/content/highlights";
 
 export default function PhotoHighlights() {
-  const [feature, ...rest] = pastEvents;
-  const secondary = rest.slice(0, 2);
+  const feature = photoHighlights.find((p) => p.featured) ?? photoHighlights[0];
+  const secondary = photoHighlights.filter((p) => p !== feature);
 
   return (
     <section className="bg-parchment-50 py-20 sm:py-28">
@@ -14,7 +14,7 @@ export default function PhotoHighlights() {
           <SectionHeading
             eyebrow="Recent Activity"
             title="This is what active looks like"
-            subtitle="No stock photos, no staged shots — just what patrols actually did this season."
+            subtitle="No stock photos, no staged shots — Camp Baker, Oregon, summer 2026."
           />
           <Link
             href="/activities"
@@ -28,37 +28,34 @@ export default function PhotoHighlights() {
           {feature ? (
             <Link
               href="/activities"
-              className="group relative row-span-2 aspect-[4/5] overflow-hidden rounded-sm shadow-patch lg:aspect-auto"
+              className="group relative row-span-2 aspect-[4/5] overflow-hidden rounded-sm shadow-patch lg:aspect-auto lg:min-h-[520px]"
             >
               <Image
-                src={feature.image.src}
-                alt={feature.image.alt}
+                src={feature.src}
+                alt={feature.alt}
                 fill
                 sizes="(min-width: 1024px) 40vw, 100vw"
                 className="object-cover transition-transform duration-500 ease-[var(--ease-spring)] group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-950/85 via-purple-950/10 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">
-                <p className="font-display text-xs font-bold uppercase tracking-[0.14em] text-gold-400">
-                  {feature.category.replace("-", " ")}
-                </p>
-                <p className="mt-1 font-display text-2xl font-bold uppercase text-parchment-50">
-                  {feature.title}
+                <p className="font-display text-2xl font-bold uppercase text-parchment-50">
+                  {feature.caption}
                 </p>
               </div>
             </Link>
           ) : null}
 
           <div className="grid gap-4 sm:grid-cols-2 lg:col-span-2">
-            {secondary.map((event) => (
+            {secondary.map((photo) => (
               <Link
-                key={event.slug}
+                key={photo.src}
                 href="/activities"
                 className="group relative aspect-[4/3] overflow-hidden rounded-sm shadow-patch"
               >
                 <Image
-                  src={event.image.src}
-                  alt={event.image.alt}
+                  src={photo.src}
+                  alt={photo.alt}
                   fill
                   sizes="(min-width: 1024px) 20vw, 50vw"
                   className="object-cover transition-transform duration-500 ease-[var(--ease-spring)] group-hover:scale-105"
@@ -66,7 +63,7 @@ export default function PhotoHighlights() {
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-950/85 via-purple-950/10 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4">
                   <p className="font-display text-lg font-bold uppercase leading-tight text-parchment-50">
-                    {event.title}
+                    {photo.caption}
                   </p>
                 </div>
               </Link>
