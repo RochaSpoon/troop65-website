@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Troop 65 Long Beach website
 
-## Getting Started
+The website for Boy Scout Troop 65 of Long Beach, California. It replaces the Google Site at t65.org.
 
-First, run the development server:
+- **Webmasters (scouts):** read [WEBMASTER.md](WEBMASTER.md). All editing happens in Studio at `/studio`.
+- **Account owner:** read [MAINTAINER.md](MAINTAINER.md) for hosting, setup, logins, and the domain.
+
+## Stack
+
+Next.js (App Router) with TypeScript and Tailwind, hosted on Vercel Hobby. Content lives in Sanity (free plan), with Studio embedded at `/studio`. Publishing in Studio calls `/api/revalidate`, which refreshes the site without a deploy.
+
+## Develop
 
 ```bash
+npm install
+cp .env.example .env.local   # optional: without a Sanity project ID the site uses content/seed.json
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Path | What it is |
+|---|---|
+| `app/(site)/` | Public pages and the `/troop` section |
+| `app/studio/` | Embedded Sanity Studio |
+| `app/api/revalidate/` | Webhook Sanity calls on publish |
+| `sanity/` | Content model, Studio layout, queries |
+| `content/seed.json` | Starting content, taken from the old site |
+| `scripts/import-to-sanity.mjs` | Copies the starting content and photos into Sanity (`npm run import-content`) |
+| `scrape/` | The crawl of the old t65.org: text, original images, links, and `INVENTORY.md` |
