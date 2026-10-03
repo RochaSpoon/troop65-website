@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Palette sampled from logo.png: purple #7109A1, gold #FFB308. */
+@theme {
+  --color-purple: #7109a1;
+  --color-purple-deep: #4a0669;
+  --color-purple-ink: #1c0828;
+  --color-gold: #ffb308;
+  --color-ink: #17121b;
+  --color-paper: #ffffff;
+  --color-stone: #f3f1f4;
+  --color-line: #ddd8e0;
+  --color-muted: #5b5361;
+
+  --font-shoulders: var(--font-big-shoulders);
+  --font-public: var(--font-public-sans);
+  --font-zilla: var(--font-zilla-slab);
+  --font-franklin: var(--font-libre-franklin);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+/* Outlined numerals, taken from the white-on-purple "65" on the badge. */
+.numeral-outline {
+  color: transparent;
+  -webkit-text-stroke: 2px currentColor;
+  paint-order: stroke fill;
+}
+
+.numeral-outline-purple {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-purple);
+}
+
+.numeral-outline-gold {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--color-gold);
+}
+
+.numeral-outline-white {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+}
