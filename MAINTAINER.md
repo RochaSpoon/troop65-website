@@ -16,6 +16,20 @@ How a change reaches the site: the webmaster clicks **Publish** in Studio. Sanit
 
 If Sanity is ever unreachable or not set up, the site falls back to the starting content in `content/seed.json`, so it never goes blank.
 
+## Current setup (October 2026)
+
+Already done, so you don't need to repeat the one-time setup below:
+
+- **Sanity project:** `t65`, Project ID `8ow0ca2u`, dataset `production` (public). Starting content and photos are imported.
+- **Vercel project:** `troop65-website` under the `rochaspoon` account, connected to the GitHub repo. Live at **https://troop65-website.vercel.app**. Studio is at **https://troop65-website.vercel.app/studio**.
+- **Environment variables** are set on Vercel as listed in step 2 below.
+- **CORS origins** in Sanity: `https://troop65-website.vercel.app`, `https://troop65-website-rochaspoons-projects.vercel.app`, `http://localhost:3000`.
+- **Webhook** `Revalidate site` points at `https://troop65-website.vercel.app/api/revalidate` and has been tested.
+
+Vercel deploys the **`main`** branch to production. Merge the website branch into `main` so future pushes keep deploying the new site.
+
+The steps below are kept for reference, or for setting it all up again from scratch.
+
 ## One-time setup
 
 Do these in order. It takes about 30 minutes.
