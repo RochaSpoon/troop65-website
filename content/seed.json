@@ -1,0 +1,704 @@
+{
+  "settings": {
+    "_id": "settings",
+    "_type": "settings",
+    "visitFormUrl": "https://docs.google.com/forms/d/e/1FAIpQLSc3N7scmapqtL91fgAU677lImyY8gHbT76OgtwO39tO-7bMUg/viewform?usp=dialog",
+    "meetingDays": "1st and 3rd Tuesday of each month",
+    "meetingTime": "6:30 to 8:30 pm",
+    "meetingPlace": "Lakewood Village Community Church",
+    "meetingAddress": "4515 Sunfield Ave, Long Beach, CA 90808",
+    "emailListUrl": "https://lists.simplelists.com/troop65/subscribe/",
+    "beAScoutUrl": "https://beascout.scouting.org/list/?zip=90712&program%5B%5D=pack&program%5B%5D=scoutsBSA&unitID=210515"
+  },
+  "homePage": {
+    "_id": "homePage",
+    "_type": "homePage",
+    "heroKicker": "Scouts BSA · Iron Star District",
+    "heroHeading": "Scouting in Long Beach since 1937.",
+    "heroText": "Troop 65 is a Boy Scout troop of about 40 scouts. We meet two Tuesday nights a month and go camping together.",
+    "heroImage": {
+      "src": "/photos/troop-bear-statue.jpg",
+      "alt": "Troop 65 scouts in purple shirts gathered on a carved wooden bear in a pine forest"
+    },
+    "facts": [
+      {
+        "_type": "fact",
+        "number": "1937",
+        "label": "The year the troop started"
+      },
+      {
+        "_type": "fact",
+        "number": "200+",
+        "label": "Eagle Scouts from Troop 65"
+      },
+      {
+        "_type": "fact",
+        "number": "40",
+        "label": "Scouts in the troop today, about"
+      },
+      {
+        "_type": "fact",
+        "number": "4",
+        "label": "Patrols"
+      }
+    ],
+    "tuesdayHeading": "A Tuesday night at Troop 65",
+    "tuesdayText": "We meet the 1st and 3rd Tuesday of each month at Lakewood Village Community Church.",
+    "tuesdayImage": {
+      "src": "/photos/campfire.jpg",
+      "alt": "Scouts around a campfire ring at dusk, cooking over the fire on sticks"
+    },
+    "schedule": [
+      {
+        "_type": "scheduleItem",
+        "time": "6:30",
+        "title": "Patrol meetings",
+        "text": "Each patrol meets in its own room."
+      },
+      {
+        "_type": "scheduleItem",
+        "time": "7:30",
+        "title": "Troop meeting",
+        "text": "Then the whole troop meets together."
+      },
+      {
+        "_type": "scheduleItem",
+        "time": "8:30",
+        "title": "Pick up",
+        "text": "Meetings end at 8:30 pm."
+      }
+    ],
+    "tuesdayNote": "Our four patrols are the Sabertooths, Eagles, Diamondbacks, and Falcons.",
+    "outdoorsHeading": "Where we went this year",
+    "outdoorsText": "Campouts are optional. Most run Friday night to Sunday morning.",
+    "trips": [
+      {
+        "_type": "trip",
+        "name": "Camp Baker",
+        "year": "2026",
+        "note": "Summer camp",
+        "image": {
+          "src": "/photos/sand-dunes.jpg",
+          "alt": "Scouts sandboarding down a big sand dune with the troop flag at the top"
+        }
+      },
+      {
+        "_type": "trip",
+        "name": "Firestone Camporee",
+        "year": "2026",
+        "note": "Council camporee",
+        "image": {
+          "src": "/photos/camporee-stretcher.jpg",
+          "alt": "Scouts in purple shirts carrying a teammate on a homemade stretcher at camporee"
+        }
+      },
+      {
+        "_type": "trip",
+        "name": "Chino Hills State Park",
+        "year": "2026",
+        "note": "Pre-summer camp",
+        "image": {
+          "src": "/photos/hillside-climb.jpg",
+          "alt": "A line of scouts climbing a steep grassy hillside"
+        }
+      }
+    ],
+    "lairKicker": "The Eagle Lair",
+    "lairHeading": "More than 200 Eagle Scouts",
+    "lairText": "When a scout earns Eagle with Troop 65, their name is burned into a piece of leather and hung in our Eagle Lair. The troop has kept this up for more than 70 years. Come to a meeting and you can read every name.",
+    "lairImage": {
+      "src": "/photos/eagle-lair-header-2.jpg",
+      "alt": "Leather panel hanging from a branch, burned with the words Troop 65 Eagles Lair"
+    },
+    "spaceHeading": "A basement of our own",
+    "spaceImage": {
+      "src": "/photos/mural-60th.jpg",
+      "alt": "Painted Troop 65 60th anniversary mural on the basement wall, with mountains and the years 1937 to 1997"
+    },
+    "joinHeading": "Come see a meeting",
+    "joinText": "Bring your scout on a Tuesday night. Fill out the form so we know to expect you."
+  },
+  "aboutPage": {
+    "_id": "aboutPage",
+    "_type": "aboutPage",
+    "heading": "About Troop 65",
+    "intro": "Troop 65 is a Scouts BSA troop in Long Beach, California. We have been meeting since 1937. We are part of the Iron Star District of the Long Beach Area Council.",
+    "heroImage": {
+      "src": "/photos/camporee-gate.jpg",
+      "alt": "Troop 65 scouts in purple shirts under the entrance gate at the 2026 Firestone camporee"
+    },
+    "sections": [
+      {
+        "_type": "textSection",
+        "heading": "Since 1937",
+        "text": "The troop started in 1937. Our motto is on the logo: Serving God and Country since 1937.\n\nIn 1997 the troop turned 60. A painted mural from that year is still on the wall of our meeting room.\n\nPeople know us as the Purple Plague. You will see a lot of purple shirts at our meetings and campouts.\n\n[NEEDS INFO] More of the troop's history. Who started it, where it first met, and anything the old-timers like to tell.",
+        "images": [
+          {
+            "src": "/photos/mural-60th.jpg",
+            "alt": "Painted Troop 65 60th anniversary mural with mountains and the years 1937 to 1997"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Four patrols",
+        "text": "Every scout belongs to a patrol. A patrol is a small group that meets together, camps together, and has its own patrol leader. We have four.\n\nThe Eagles are our longest running patrol. They are known for showing up to troop events.\n\nThe Sabertooths are our newest patrol. They have been around for 15 years.\n\nThe Diamondbacks are built on the Scout Oath and Scout Law, and they want to keep growing.\n\nThe Falcons are a hard-working patrol that welcomes new scouts on every outing."
+      },
+      {
+        "_type": "textSection",
+        "heading": "Scouts run the meetings",
+        "text": "Scouts hold 17 troop jobs. The Senior Patrol Leader runs the troop with help from the Assistant Senior Patrol Leader and the four patrol leaders. Other scouts serve as Quartermaster, Scribe, Historian, Librarian, Chaplain Aide, Bugler, Webmaster, Outdoor Ethics Guide, Recruitment Advisor, and Troop Instructor.\n\nThe Patrol Leaders Council meets on the 4th Tuesday of each month to plan what the troop does next.",
+        "images": [
+          {
+            "src": "/photos/flag-room.jpg",
+            "alt": "A scout in uniform in front of the American flag and troop banners in the meeting room"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Adults help",
+        "text": "Adult leaders and a troop committee of parents support the scouts. There is a Scoutmaster, assistant Scoutmasters for each patrol, and committee members who handle jobs like advancement, equipment, and fundraising."
+      }
+    ]
+  },
+  "whatWeDoPage": {
+    "_id": "whatWeDoPage",
+    "_type": "whatWeDoPage",
+    "heading": "What we do",
+    "intro": "We camp, hike, serve our church and community, and work on ranks and merit badges. Here is what the troop has been up to.",
+    "heroImage": {
+      "src": "/photos/hike-ridge.jpg",
+      "alt": "Troop 65 hiking single file through tall golden grass on a hillside"
+    },
+    "sections": [
+      {
+        "_type": "textSection",
+        "heading": "Campouts",
+        "text": "Campouts are optional. Most run Friday night to Sunday morning.\n\nIn 2026 the troop went to Winter Camp at Camp Emerson, held a lock-in overnight at the church, went to Desert Camp in the Mecca Wilderness, and spent a weekend at pre-summer camp in Chino Hills.",
+        "images": [
+          {
+            "src": "/photos/gallery/chino-hills-076.jpg",
+            "alt": "Four scouts with backpacks crossing a creek on a log"
+          },
+          {
+            "src": "/photos/gallery/chino-hills-074.jpg",
+            "alt": "Scouts at a camp table with a stove and gear, patrol flag behind them"
+          },
+          {
+            "src": "/photos/gallery/chino-hills-077.jpg",
+            "alt": "Scouts hiking up a narrow trail through dry brush"
+          },
+          {
+            "src": "/photos/gallery/chino-hills-075.jpg",
+            "alt": "Scouts at a picnic table working in their handbooks"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Pre-summer camp at Chino Hills State Park, 2026",
+        "text": "The campground had lots of open space, so most of the scouts played Three-Flags-Up and baseball. We also went on a hike, which was good practice for the longer hikes coming up.",
+        "images": [
+          {
+            "src": "/photos/gallery/chino-hills-071.jpg",
+            "alt": "Scout in a sun hat holding a camp axe in a roped-off chopping area"
+          },
+          {
+            "src": "/photos/gallery/chino-hills-072.jpg",
+            "alt": "Scouts in uniform lined up on a dry field"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Firestone Camporee, 2026",
+        "text": "Troop 65 competed at the council camporee at Firestone Scout Reservation. We did not win as many trophies this year, but we had a great time. It was the first taste of T65 competition for our new scouts.",
+        "images": [
+          {
+            "src": "/photos/gallery/camporee-066.jpg",
+            "alt": "Scouts at a rope and pole lashing station on a dirt field"
+          },
+          {
+            "src": "/photos/gallery/camporee-067.jpg",
+            "alt": "Scouts in sun hats working together at a water pump challenge"
+          },
+          {
+            "src": "/photos/gallery/camporee-068.jpg",
+            "alt": "Scouts reading a map and filling in a clipboard together"
+          },
+          {
+            "src": "/photos/gallery/camporee-065.jpg",
+            "alt": "Scouts gathered at a competition table under a red canopy"
+          },
+          {
+            "src": "/photos/gallery/camporee-064.jpg",
+            "alt": "Two scouts by a Dutch oven cooking pit"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Summer camp at Camp Baker, 2026",
+        "text": "[NEEDS INFO] A few sentences about the week at Camp Baker.",
+        "images": [
+          {
+            "src": "/photos/sand-dunes.jpg",
+            "alt": "Scouts sandboarding down a big sand dune with the troop flag at the top"
+          },
+          {
+            "src": "/photos/archery.jpg",
+            "alt": "Scout smiling next to an archery target with arrows in the bullseye"
+          },
+          {
+            "src": "/photos/canoe.jpg",
+            "alt": "Two scouts in a purple canoe, one holding a paddle over his head"
+          },
+          {
+            "src": "/photos/climbing-tower.jpg",
+            "alt": "Two scouts in climbing helmets and harnesses in front of a climbing tower"
+          },
+          {
+            "src": "/photos/gallery/camp-baker-tide-pools.jpg",
+            "alt": "Scouts exploring tide pools on a rocky beach"
+          },
+          {
+            "src": "/photos/gallery/camp-baker-boat.jpg",
+            "alt": "Two scouts in life jackets grinning on a motorboat on a lake"
+          },
+          {
+            "src": "/photos/gallery/camp-baker-rifle.jpg",
+            "alt": "Scout wearing ear protection at a rifle range bench"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Service",
+        "text": "We help at Lakewood Village Community Church, where we meet. In 2026 that meant Scout Sunday, Palm Sunday, Good Friday, and Easter Sunday. Scouts also put out flags for Memorial Day.\n\nScouts working on Eagle plan and lead a service project, and the troop comes out to help.\n\nThe troop raises money with a pancake breakfast."
+      },
+      {
+        "_type": "textSection",
+        "heading": "Advancement",
+        "text": "Scouts work through the ranks from Scout to Eagle and earn merit badges along the way. Scouts and parents can track progress in the Scoutbook app.\n\nAfter a Scoutmaster Conference, a scout signs up for a Board of Review. Boards of Review are held on the 4th Tuesday of each month.\n\nAt Courts of Honor, scouts receive their new ranks and merit badges.",
+        "images": [
+          {
+            "src": "/photos/gallery/nylt-group-2.jpg",
+            "alt": "Scouts in uniform wearing lanyards outside under oak trees"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
+        "heading": "Leadership training",
+        "text": "Scouts who hold troop jobs can take National Youth Leadership Training (NYLT). Five scouts from Troop 65 have finished it.",
+        "images": [
+          {
+            "src": "/photos/gallery/nylt-group-1.jpg",
+            "alt": "Five scouts in uniform holding ice cream cups at a Dairy Queen"
+          }
+        ]
+      }
+    ]
+  },
+  "ourSpacePage": {
+    "_id": "ourSpacePage",
+    "_type": "ourSpacePage",
+    "heading": "Our space",
+    "intro": "Troop 65 has its own meeting space: a basement of about 2,500 square feet at Lakewood Village Community Church.",
+    "size": "2,500",
+    "sizeLabel": "Square feet, about",
+    "rooms": [
+      {
+        "_type": "room",
+        "name": "Main meeting area",
+        "image": {
+          "src": "/photos/mural-60th.jpg",
+          "alt": "Painted Troop 65 60th anniversary mural on the basement wall"
+        }
+      },
+      {
+        "_type": "room",
+        "name": "Patrol rooms",
+        "text": "Each of our four patrols has a room of its own."
+      },
+      {
+        "_type": "room",
+        "name": "The Eagle Lair",
+        "text": "Every Troop 65 Eagle Scout's name is burned into leather and hung here. There are more than 200.",
+        "image": {
+          "src": "/photos/eagle-lair-header-2.jpg",
+          "alt": "Leather panel burned with the words Troop 65 Eagles Lair"
+        }
+      },
+      {
+        "_type": "room",
+        "name": "Chapel"
+      },
+      {
+        "_type": "room",
+        "name": "Quartermaster inventory room",
+        "text": "Where the Quartermaster keeps the troop's gear."
+      },
+      {
+        "_type": "room",
+        "name": "Woodworking shop"
+      },
+      {
+        "_type": "room",
+        "name": "Conference room"
+      },
+      {
+        "_type": "room",
+        "name": "Parent meeting room"
+      }
+    ]
+  },
+  "leadershipPage": {
+    "_id": "leadershipPage",
+    "_type": "leadershipPage",
+    "heading": "Troop officers",
+    "intro": "These scouts lead Troop 65 this year. Officers are scouts, not adults.",
+    "officers": [
+      {
+        "_type": "officer",
+        "position": "Senior Patrol Leader",
+        "name": "Maxwell Worley",
+        "photo": {
+          "src": "/photos/officers/senior-patrol-leader.jpg",
+          "alt": "Maxwell Worley, Senior Patrol Leader"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Assistant Senior Patrol Leader",
+        "name": "Mason Worley",
+        "photo": {
+          "src": "/photos/officers/assistant-senior-patrol-leader.jpg",
+          "alt": "Mason Worley, Assistant Senior Patrol Leader"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Quartermaster",
+        "name": "Neil Truitt",
+        "photo": {
+          "src": "/photos/officers/quartermaster.jpg",
+          "alt": "Neil Truitt, Quartermaster"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Scribe",
+        "name": "Tobias Yi",
+        "photo": {
+          "src": "/photos/officers/scribe.jpg",
+          "alt": "Tobias Yi, Scribe"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Sabertooths Patrol Leader",
+        "name": "George Cota",
+        "photo": {
+          "src": "/photos/officers/sabertooths-patrol-leader.jpg",
+          "alt": "George Cota, Sabertooths Patrol Leader"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Diamondbacks Patrol Leader",
+        "name": "Mathew Fausto",
+        "photo": {
+          "src": "/photos/officers/diamondbacks-patrol-leader.jpg",
+          "alt": "Mathew Fausto, Diamondbacks Patrol Leader"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Eagles Patrol Leader",
+        "name": "Henry Cerulle",
+        "photo": {
+          "src": "/photos/officers/eagles-patrol-leader.jpg",
+          "alt": "Henry Cerulle, Eagles Patrol Leader"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Flaming Falcons Patrol Leader",
+        "name": "Liam Dougherty",
+        "photo": {
+          "src": "/photos/officers/falcons-patrol-leader.jpg",
+          "alt": "Liam Dougherty, Flaming Falcons Patrol Leader"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Webmaster",
+        "name": "Elijah Donaldson",
+        "photo": {
+          "src": "/photos/officers/webmaster.jpg",
+          "alt": "Elijah Donaldson, Webmaster"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Chaplain Aide",
+        "name": "Jack Hackert",
+        "photo": {
+          "src": "/photos/officers/chaplain-aide.jpg",
+          "alt": "Jack Hackert, Chaplain Aide"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Historian",
+        "name": "Thomas Truitt",
+        "photo": {
+          "src": "/photos/officers/historian.jpg",
+          "alt": "Thomas Truitt, Historian"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Librarian",
+        "name": "Samuel Gonzalez"
+      },
+      {
+        "_type": "officer",
+        "position": "Outdoor Ethics Guide",
+        "name": "Alex Joannes",
+        "photo": {
+          "src": "/photos/officers/outdoor-ethics-guide.jpg",
+          "alt": "Alex Joannes, Outdoor Ethics Guide"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Troop Instructor",
+        "name": "Luke Price",
+        "photo": {
+          "src": "/photos/officers/troop-instructor-1.jpg",
+          "alt": "Luke Price, Troop Instructor"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Troop Instructor",
+        "name": "Jacob Arnoult",
+        "photo": {
+          "src": "/photos/officers/troop-instructor-2.jpg",
+          "alt": "Jacob Arnoult, Troop Instructor"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Recruitment Advisor",
+        "name": "David Mariaca",
+        "photo": {
+          "src": "/photos/officers/recruitment-advisor.jpg",
+          "alt": "David Mariaca, Recruitment Advisor"
+        }
+      },
+      {
+        "_type": "officer",
+        "position": "Bugler",
+        "name": "Isiah Leonard",
+        "photo": {
+          "src": "/photos/officers/bugler.jpg",
+          "alt": "Isiah Leonard, Bugler"
+        }
+      }
+    ]
+  },
+  "joinPage": {
+    "_id": "joinPage",
+    "_type": "joinPage",
+    "heading": "Visit a meeting",
+    "intro": "The best way to see if Troop 65 is a fit is to come to a Tuesday meeting. Fill out the form and we will look for you.",
+    "heroImage": {
+      "src": "/photos/camp-cooking.jpg",
+      "alt": "Scouts at a camp table with a stove and gear, patrol flag behind them",
+      "hotspot": {
+        "x": 0.5,
+        "y": 0.22
+      }
+    },
+    "steps": [
+      {
+        "_type": "step",
+        "heading": "Fill out the form",
+        "text": "Tell us who is coming and which Tuesday."
+      },
+      {
+        "_type": "step",
+        "heading": "Come at 6:30",
+        "text": "Meetings are at Lakewood Village Community Church, 4515 Sunfield Ave. The troop meets in the church basement."
+      },
+      {
+        "_type": "step",
+        "heading": "Watch a meeting",
+        "text": "Patrols meet first. At 7:30 the whole troop meets together. We finish at 8:30 pm."
+      },
+      {
+        "_type": "step",
+        "heading": "Ask questions",
+        "text": "[NEEDS INFO] Who a visiting parent should look for, and what they can ask about."
+      }
+    ],
+    "whoCanJoin": "Youth can join once they are 10 and in 5th grade. A Cub Scout who has earned the Arrow of Light can bridge over at 10 and in 5th grade. Scouts can stay until they turn 18.",
+    "whatToBring": "[NEEDS INFO] What a new scout should wear and bring to a first meeting.",
+    "cost": "[NEEDS INFO] Yearly dues and what a uniform costs.",
+    "signUpText": "When you are ready to join, you can sign up through Scouting America's BeAScout site."
+  },
+  "troopPage": {
+    "_id": "troopPage",
+    "_type": "troopPage",
+    "heading": "Troop",
+    "intro": "Calendar, links, and forms for Troop 65 scouts and families.",
+    "calendarEmbedUrl": "https://calendar.google.com/calendar/embed?src=bsatroop65longbeach%40t65.org&src=scoutwebmaster%40t65.org&ctz=America%2FLos_Angeles&mode=AGENDA&showTitle=0&showPrint=0&showTabs=1&showCalendars=0&color=%237109A1&color=%23B37A00",
+    "linkGroups": [
+      {
+        "_type": "linkGroup",
+        "title": "Troop tools",
+        "links": [
+          {
+            "_type": "linkItem",
+            "label": "Scoutbook (track ranks and merit badges)",
+            "url": "https://scoutbook.scouting.org/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Get troop emails",
+            "url": "https://lists.simplelists.com/troop65/subscribe/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Troop 65 on BeAScout",
+            "url": "https://beascout.scouting.org/list/?zip=90712&program%5B%5D=pack&program%5B%5D=scoutsBSA&unitID=210515"
+          }
+        ]
+      },
+      {
+        "_type": "linkGroup",
+        "title": "Advancement and merit badges",
+        "links": [
+          {
+            "_type": "linkItem",
+            "label": "Merit badges (Scouting America)",
+            "url": "https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/merit-badges/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Blue Card (fillable PDF)",
+            "url": "https://www.cccbsa.org/wp-content/uploads/mb-app-blue-card-fillable_.pdf"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Rank requirements (PDF)",
+            "url": "https://www.scouting.org/wp-content/uploads/2019/02/Scouts-BSA-Requirements-3321619.pdf"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Eagle Project Workbook (PDF)",
+            "url": "https://www.scouting.org/wp-content/uploads/2021/02/EagleProjectWorkbook2021c-v2.pdf"
+          },
+          {
+            "_type": "linkItem",
+            "label": "National Outdoor Awards",
+            "url": "https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/noa/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Practice questions for a Board of Review",
+            "url": "https://www.boyscouttrail.com/boardofreview.asp"
+          }
+        ]
+      },
+      {
+        "_type": "linkGroup",
+        "title": "Health and safety",
+        "links": [
+          {
+            "_type": "linkItem",
+            "label": "Medical forms (Annual Health and Medical Record)",
+            "url": "https://www.scouting.org/health-and-safety/ahmr/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Youth Protection Training",
+            "url": "https://www.scouting.org/training/youth-protection/"
+          }
+        ]
+      },
+      {
+        "_type": "linkGroup",
+        "title": "Council and training",
+        "links": [
+          {
+            "_type": "linkItem",
+            "label": "Long Beach Area Council",
+            "url": "https://www.longbeachbsa.org/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Council training calendar",
+            "url": "https://www.longbeachbsa.org/training/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "NYLT (National Youth Leadership Training)",
+            "url": "https://nylt-leadershipacademy.org/"
+          },
+          {
+            "_type": "linkItem",
+            "label": "Merit Badge Counselor application, for adults (PDF)",
+            "url": "https://filestore.scouting.org/filestore/pdf/34405.pdf"
+          }
+        ]
+      }
+    ],
+    "documents": [
+      {
+        "_type": "docLink",
+        "label": "Board of Review sign-up",
+        "note": "Fill this out after your Scoutmaster Conference to reserve a Board of Review.",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdsloIKayiBL8Gmsi1dGuxzQHe77AF_eJc4cwRNkQQc2HEIoA/viewform"
+      },
+      {
+        "_type": "docLink",
+        "label": "Troop activity schedule",
+        "note": "Campouts, service, and events for the year.",
+        "url": "https://drive.google.com/open?id=1AK3FooUJywt_tYsSnGcp_zy13gHwuzuliTuJXlszn0w"
+      },
+      {
+        "_type": "docLink",
+        "label": "Troop duties schedule",
+        "note": "Which patrol handles flags, demo, game, and cleanup each meeting.",
+        "url": "https://drive.google.com/open?id=14oY3bGrfJztlJZWMqr11TLacFo2mbj53i73wp-C1VP4"
+      },
+      {
+        "_type": "docLink",
+        "label": "Adult leaders",
+        "note": "Who to contact for what.",
+        "url": "https://drive.google.com/open?id=1jEvGEVMwkCddvJ_jWgKChrNVEYafPeIp10eOoJssco4"
+      }
+    ]
+  },
+  "announcements": [
+    {
+      "_id": "announcement-court-of-honor",
+      "_type": "announcement",
+      "title": "Next Court of Honor: December",
+      "body": "Our next Court of Honor is in December at Lakewood Village Community Church. Date to be announced. Scouts will receive rank advancements and merit badge awards."
+    },
+    {
+      "_id": "announcement-board-of-review",
+      "_type": "announcement",
+      "title": "Boards of Review: 4th Tuesday of every month",
+      "body": "Boards of Review start at 6:30 pm. The exact time is set once we know how many adult volunteers we have. Sign up after you finish your Scoutmaster Conference.",
+      "linkLabel": "Sign up for a Board of Review",
+      "linkUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdsloIKayiBL8Gmsi1dGuxzQHe77AF_eJc4cwRNkQQc2HEIoA/viewform"
+    }
+  ]
+}

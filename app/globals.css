@@ -14,8 +14,6 @@
 
   --font-shoulders: var(--font-big-shoulders);
   --font-public: var(--font-public-sans);
-  --font-zilla: var(--font-zilla-slab);
-  --font-franklin: var(--font-libre-franklin);
 }
 
 html {
