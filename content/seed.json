@@ -141,6 +141,41 @@
       },
       {
         "_type": "textSection",
+        "heading": "The Eagle Lair",
+        "text": "When a scout earns Eagle with Troop 65, their name is burned into a piece of leather and hung in our Eagle Lair. The troop has kept this tradition for more than 70 years, and there are now more than 200 names on the wall.\n\nCome to a meeting and you can read every one.",
+        "images": [
+          {
+            "src": "/photos/eagle-lair/panel-053.jpg",
+            "alt": "Eagle Lair leather panels hanging on the wall, burned with Eagle Scout names from 2006 to 2008"
+          },
+          {
+            "src": "/photos/eagle-lair/panel-044.jpg",
+            "alt": "The oldest Eagle Lair panel, with names from 1954 to 1985"
+          },
+          {
+            "src": "/photos/eagle-lair/panel-046.jpg",
+            "alt": "Faded Eagle Lair panel with names from 1985 to 1990"
+          },
+          {
+            "src": "/photos/eagle-lair/panel-049.jpg",
+            "alt": "Eagle Lair panel hanging from a branch, names from 2003 to 2004"
+          },
+          {
+            "src": "/photos/eagle-lair/panel-051.jpg",
+            "alt": "Eagle Lair panel with names from 2004 to 2006"
+          },
+          {
+            "src": "/photos/eagle-lair/panel-055.jpg",
+            "alt": "Eagle Lair panel with names from 2011 to 2013"
+          },
+          {
+            "src": "/photos/eagle-lair/panel-061.jpg",
+            "alt": "Eagle Lair panel with names from 2020 to 2023"
+          }
+        ]
+      },
+      {
+        "_type": "textSection",
         "heading": "Four patrols",
         "text": "Every scout belongs to a patrol. A patrol is a small group that meets together, camps together, and has its own patrol leader. We have four.\n\nThe Eagles are our longest running patrol. They are known for showing up to troop events.\n\nThe Sabertooths are our newest patrol. They have been around for 15 years.\n\nThe Diamondbacks are built on the Scout Oath and Scout Law, and they want to keep growing.\n\nThe Falcons are a hard-working patrol that welcomes new scouts on every outing."
       },
