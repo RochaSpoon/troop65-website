@@ -1,6 +1,6 @@
 import { defineQuery } from "next-sanity";
 
-const photo = `{ "src": asset->url, alt, hotspot }`;
+const photo = `{ "src": asset->url, alt, hotspot, "w": asset->metadata.dimensions.width, "h": asset->metadata.dimensions.height }`;
 
 export const settingsQuery = defineQuery(`*[_id == "settings"][0]`);
 

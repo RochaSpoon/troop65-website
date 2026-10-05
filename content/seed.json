@@ -14,11 +14,13 @@
     "_id": "homePage",
     "_type": "homePage",
     "heroKicker": "Scouts BSA · Iron Star District",
-    "heroHeading": "Scouting in Long Beach since 1937.",
-    "heroText": "Troop 65 is a Boy Scout troop of about 40 scouts. We meet two Tuesday nights a month and go camping together.",
+    "heroHeading": "Come downstairs. The troop is meeting.",
+    "heroText": "Troop 65 is a Boy Scout troop of about 40 scouts. We meet two Tuesday nights a month in our own basement, and we go camping together.",
     "heroImage": {
       "src": "/photos/troop-bear-statue.jpg",
-      "alt": "Troop 65 scouts in purple shirts gathered on a carved wooden bear in a pine forest"
+      "alt": "Troop 65 scouts in purple shirts gathered on a carved wooden bear in a pine forest",
+      "w": 1277,
+      "h": 960
     },
     "facts": [
       {
@@ -46,7 +48,9 @@
     "tuesdayText": "We meet the 1st and 3rd Tuesday of each month at Lakewood Village Community Church.",
     "tuesdayImage": {
       "src": "/photos/campfire.jpg",
-      "alt": "Scouts around a campfire ring at dusk, cooking over the fire on sticks"
+      "alt": "Scouts around a campfire ring at dusk, cooking over the fire on sticks",
+      "w": 1280,
+      "h": 900
     },
     "schedule": [
       {
@@ -79,7 +83,9 @@
         "note": "Summer camp",
         "image": {
           "src": "/photos/sand-dunes.jpg",
-          "alt": "Scouts sandboarding down a big sand dune with the troop flag at the top"
+          "alt": "Scouts sandboarding down a big sand dune with the troop flag at the top",
+          "w": 960,
+          "h": 960
         }
       },
       {
@@ -89,7 +95,9 @@
         "note": "Council camporee",
         "image": {
           "src": "/photos/camporee-stretcher.jpg",
-          "alt": "Scouts in purple shirts carrying a teammate on a homemade stretcher at camporee"
+          "alt": "Scouts in purple shirts carrying a teammate on a homemade stretcher at camporee",
+          "w": 2400,
+          "h": 2400
         }
       },
       {
@@ -99,7 +107,9 @@
         "note": "Pre-summer camp",
         "image": {
           "src": "/photos/hillside-climb.jpg",
-          "alt": "A line of scouts climbing a steep grassy hillside"
+          "alt": "A line of scouts climbing a steep grassy hillside",
+          "w": 1913,
+          "h": 1438
         }
       }
     ],
@@ -107,16 +117,28 @@
     "lairHeading": "More than 200 Eagle Scouts",
     "lairText": "When a scout earns Eagle with Troop 65, their name is burned into a piece of leather and hung in our Eagle Lair. The troop has kept this up for more than 70 years. Come to a meeting and you can read every name.",
     "lairImage": {
-      "src": "/photos/eagle-lair-header-2.jpg",
-      "alt": "Leather panel hanging from a branch, burned with the words Troop 65 Eagles Lair"
+      "src": "/photos/eagle-lair/panel-060.jpg",
+      "alt": "Leather Eagle Lair panel hanging from a branch, burned with the names of Troop 65 Eagle Scouts from 2017 to 2019",
+      "w": 1021,
+      "h": 1400
     },
     "spaceHeading": "A basement of our own",
     "spaceImage": {
       "src": "/photos/mural-60th.jpg",
-      "alt": "Painted Troop 65 60th anniversary mural on the basement wall, with mountains and the years 1937 to 1997"
+      "alt": "Painted Troop 65 60th anniversary mural on the basement wall, with mountains and the years 1937 to 1997",
+      "w": 1368,
+      "h": 1368
     },
     "joinHeading": "Come see a meeting",
-    "joinText": "Bring your scout on a Tuesday night. Fill out the form so we know to expect you."
+    "joinText": "Bring your scout on a Tuesday night. Fill out the form so we know to expect you.",
+    "boardLines": [
+      "Welcome to",
+      "*Troop 65",
+      "-The Purple Plague",
+      "1st & 3rd Tuesdays",
+      "6:30 to 8:30 pm",
+      "-Downstairs · New scouts welcome"
+    ]
   },
   "aboutPage": {
     "_id": "aboutPage",
@@ -125,7 +147,9 @@
     "intro": "Troop 65 is a Scouts BSA troop in Long Beach, California. We have been meeting since 1937. We are part of the Iron Star District of the Long Beach Area Council.",
     "heroImage": {
       "src": "/photos/camporee-gate.jpg",
-      "alt": "Troop 65 scouts in purple shirts under the entrance gate at the 2026 Firestone camporee"
+      "alt": "Troop 65 scouts in purple shirts under the entrance gate at the 2026 Firestone camporee",
+      "w": 2400,
+      "h": 1348
     },
     "sections": [
       {
@@ -135,7 +159,9 @@
         "images": [
           {
             "src": "/photos/mural-60th.jpg",
-            "alt": "Painted Troop 65 60th anniversary mural with mountains and the years 1937 to 1997"
+            "alt": "Painted Troop 65 60th anniversary mural with mountains and the years 1937 to 1997",
+            "w": 1368,
+            "h": 1368
           }
         ]
       },
@@ -146,31 +172,45 @@
         "images": [
           {
             "src": "/photos/eagle-lair/panel-053.jpg",
-            "alt": "Eagle Lair leather panels hanging on the wall, burned with Eagle Scout names from 2006 to 2008"
+            "alt": "Eagle Lair leather panels hanging on the wall, burned with Eagle Scout names from 2006 to 2008",
+            "w": 1021,
+            "h": 1400
           },
           {
             "src": "/photos/eagle-lair/panel-044.jpg",
-            "alt": "The oldest Eagle Lair panel, with names from 1954 to 1985"
+            "alt": "The oldest Eagle Lair panel, with names from 1954 to 1985",
+            "w": 1021,
+            "h": 1400
           },
           {
             "src": "/photos/eagle-lair/panel-046.jpg",
-            "alt": "Faded Eagle Lair panel with names from 1985 to 1990"
+            "alt": "Faded Eagle Lair panel with names from 1985 to 1990",
+            "w": 1021,
+            "h": 1400
           },
           {
             "src": "/photos/eagle-lair/panel-049.jpg",
-            "alt": "Eagle Lair panel hanging from a branch, names from 2003 to 2004"
+            "alt": "Eagle Lair panel hanging from a branch, names from 2003 to 2004",
+            "w": 1021,
+            "h": 1400
           },
           {
             "src": "/photos/eagle-lair/panel-051.jpg",
-            "alt": "Eagle Lair panel with names from 2004 to 2006"
+            "alt": "Eagle Lair panel with names from 2004 to 2006",
+            "w": 1021,
+            "h": 1400
           },
           {
             "src": "/photos/eagle-lair/panel-055.jpg",
-            "alt": "Eagle Lair panel with names from 2011 to 2013"
+            "alt": "Eagle Lair panel with names from 2011 to 2013",
+            "w": 1021,
+            "h": 1400
           },
           {
             "src": "/photos/eagle-lair/panel-061.jpg",
-            "alt": "Eagle Lair panel with names from 2020 to 2023"
+            "alt": "Eagle Lair panel with names from 2020 to 2023",
+            "w": 1021,
+            "h": 1400
           }
         ]
       },
@@ -186,7 +226,9 @@
         "images": [
           {
             "src": "/photos/flag-room.jpg",
-            "alt": "A scout in uniform in front of the American flag and troop banners in the meeting room"
+            "alt": "A scout in uniform in front of the American flag and troop banners in the meeting room",
+            "w": 2400,
+            "h": 2400
           }
         ]
       },
@@ -204,7 +246,9 @@
     "intro": "We camp, hike, serve our church and community, and work on ranks and merit badges. Here is what the troop has been up to.",
     "heroImage": {
       "src": "/photos/hike-ridge.jpg",
-      "alt": "Troop 65 hiking single file through tall golden grass on a hillside"
+      "alt": "Troop 65 hiking single file through tall golden grass on a hillside",
+      "w": 2400,
+      "h": 1348
     },
     "sections": [
       {
@@ -214,19 +258,27 @@
         "images": [
           {
             "src": "/photos/gallery/chino-hills-076.jpg",
-            "alt": "Four scouts with backpacks crossing a creek on a log"
+            "alt": "Four scouts with backpacks crossing a creek on a log",
+            "w": 1800,
+            "h": 1800
           },
           {
             "src": "/photos/gallery/chino-hills-074.jpg",
-            "alt": "Scouts at a camp table with a stove and gear, patrol flag behind them"
+            "alt": "Scouts at a camp table with a stove and gear, patrol flag behind them",
+            "w": 1800,
+            "h": 1800
           },
           {
             "src": "/photos/gallery/chino-hills-077.jpg",
-            "alt": "Scouts hiking up a narrow trail through dry brush"
+            "alt": "Scouts hiking up a narrow trail through dry brush",
+            "w": 1800,
+            "h": 1800
           },
           {
             "src": "/photos/gallery/chino-hills-075.jpg",
-            "alt": "Scouts at a picnic table working in their handbooks"
+            "alt": "Scouts at a picnic table working in their handbooks",
+            "w": 1800,
+            "h": 1800
           }
         ]
       },
@@ -237,11 +289,15 @@
         "images": [
           {
             "src": "/photos/gallery/chino-hills-071.jpg",
-            "alt": "Scout in a sun hat holding a camp axe in a roped-off chopping area"
+            "alt": "Scout in a sun hat holding a camp axe in a roped-off chopping area",
+            "w": 1232,
+            "h": 1286
           },
           {
             "src": "/photos/gallery/chino-hills-072.jpg",
-            "alt": "Scouts in uniform lined up on a dry field"
+            "alt": "Scouts in uniform lined up on a dry field",
+            "w": 1800,
+            "h": 799
           }
         ]
       },
@@ -252,23 +308,33 @@
         "images": [
           {
             "src": "/photos/gallery/camporee-066.jpg",
-            "alt": "Scouts at a rope and pole lashing station on a dirt field"
+            "alt": "Scouts at a rope and pole lashing station on a dirt field",
+            "w": 1800,
+            "h": 1800
           },
           {
             "src": "/photos/gallery/camporee-067.jpg",
-            "alt": "Scouts in sun hats working together at a water pump challenge"
+            "alt": "Scouts in sun hats working together at a water pump challenge",
+            "w": 1800,
+            "h": 1800
           },
           {
             "src": "/photos/gallery/camporee-068.jpg",
-            "alt": "Scouts reading a map and filling in a clipboard together"
+            "alt": "Scouts reading a map and filling in a clipboard together",
+            "w": 1800,
+            "h": 1800
           },
           {
             "src": "/photos/gallery/camporee-065.jpg",
-            "alt": "Scouts gathered at a competition table under a red canopy"
+            "alt": "Scouts gathered at a competition table under a red canopy",
+            "w": 1800,
+            "h": 1353
           },
           {
             "src": "/photos/gallery/camporee-064.jpg",
-            "alt": "Two scouts by a Dutch oven cooking pit"
+            "alt": "Two scouts by a Dutch oven cooking pit",
+            "w": 1150,
+            "h": 1800
           }
         ]
       },
@@ -279,31 +345,45 @@
         "images": [
           {
             "src": "/photos/sand-dunes.jpg",
-            "alt": "Scouts sandboarding down a big sand dune with the troop flag at the top"
+            "alt": "Scouts sandboarding down a big sand dune with the troop flag at the top",
+            "w": 960,
+            "h": 960
           },
           {
             "src": "/photos/archery.jpg",
-            "alt": "Scout smiling next to an archery target with arrows in the bullseye"
+            "alt": "Scout smiling next to an archery target with arrows in the bullseye",
+            "w": 960,
+            "h": 960
           },
           {
             "src": "/photos/canoe.jpg",
-            "alt": "Two scouts in a purple canoe, one holding a paddle over his head"
+            "alt": "Two scouts in a purple canoe, one holding a paddle over his head",
+            "w": 1074,
+            "h": 960
           },
           {
             "src": "/photos/climbing-tower.jpg",
-            "alt": "Two scouts in climbing helmets and harnesses in front of a climbing tower"
+            "alt": "Two scouts in climbing helmets and harnesses in front of a climbing tower",
+            "w": 960,
+            "h": 1174
           },
           {
             "src": "/photos/gallery/camp-baker-tide-pools.jpg",
-            "alt": "Scouts exploring tide pools on a rocky beach"
+            "alt": "Scouts exploring tide pools on a rocky beach",
+            "w": 1774,
+            "h": 1774
           },
           {
             "src": "/photos/gallery/camp-baker-boat.jpg",
-            "alt": "Two scouts in life jackets grinning on a motorboat on a lake"
+            "alt": "Two scouts in life jackets grinning on a motorboat on a lake",
+            "w": 1277,
+            "h": 960
           },
           {
             "src": "/photos/gallery/camp-baker-rifle.jpg",
-            "alt": "Scout wearing ear protection at a rifle range bench"
+            "alt": "Scout wearing ear protection at a rifle range bench",
+            "w": 960,
+            "h": 722
           }
         ]
       },
@@ -319,7 +399,9 @@
         "images": [
           {
             "src": "/photos/gallery/nylt-group-2.jpg",
-            "alt": "Scouts in uniform wearing lanyards outside under oak trees"
+            "alt": "Scouts in uniform wearing lanyards outside under oak trees",
+            "w": 1800,
+            "h": 1354
           }
         ]
       },
@@ -330,7 +412,9 @@
         "images": [
           {
             "src": "/photos/gallery/nylt-group-1.jpg",
-            "alt": "Five scouts in uniform holding ice cream cups at a Dairy Queen"
+            "alt": "Five scouts in uniform holding ice cream cups at a Dairy Queen",
+            "w": 1512,
+            "h": 1137
           }
         ]
       }
@@ -349,7 +433,9 @@
         "name": "Main meeting area",
         "image": {
           "src": "/photos/mural-60th.jpg",
-          "alt": "Painted Troop 65 60th anniversary mural on the basement wall"
+          "alt": "Painted Troop 65 60th anniversary mural on the basement wall",
+          "w": 1368,
+          "h": 1368
         }
       },
       {
@@ -362,8 +448,10 @@
         "name": "The Eagle Lair",
         "text": "Every Troop 65 Eagle Scout's name is burned into leather and hung here. There are more than 200.",
         "image": {
-          "src": "/photos/eagle-lair-header-2.jpg",
-          "alt": "Leather panel burned with the words Troop 65 Eagles Lair"
+          "src": "/photos/eagle-lair/panel-060.jpg",
+          "alt": "Leather Eagle Lair panel hanging from a branch, burned with the names of Troop 65 Eagle Scouts from 2017 to 2019",
+          "w": 1021,
+          "h": 1400
         }
       },
       {
@@ -401,7 +489,9 @@
         "name": "Maxwell Worley",
         "photo": {
           "src": "/photos/officers/senior-patrol-leader.jpg",
-          "alt": "Maxwell Worley, Senior Patrol Leader"
+          "alt": "Maxwell Worley, Senior Patrol Leader",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -410,7 +500,9 @@
         "name": "Mason Worley",
         "photo": {
           "src": "/photos/officers/assistant-senior-patrol-leader.jpg",
-          "alt": "Mason Worley, Assistant Senior Patrol Leader"
+          "alt": "Mason Worley, Assistant Senior Patrol Leader",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -419,7 +511,9 @@
         "name": "Neil Truitt",
         "photo": {
           "src": "/photos/officers/quartermaster.jpg",
-          "alt": "Neil Truitt, Quartermaster"
+          "alt": "Neil Truitt, Quartermaster",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -428,7 +522,9 @@
         "name": "Tobias Yi",
         "photo": {
           "src": "/photos/officers/scribe.jpg",
-          "alt": "Tobias Yi, Scribe"
+          "alt": "Tobias Yi, Scribe",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -437,7 +533,9 @@
         "name": "George Cota",
         "photo": {
           "src": "/photos/officers/sabertooths-patrol-leader.jpg",
-          "alt": "George Cota, Sabertooths Patrol Leader"
+          "alt": "George Cota, Sabertooths Patrol Leader",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -446,7 +544,9 @@
         "name": "Mathew Fausto",
         "photo": {
           "src": "/photos/officers/diamondbacks-patrol-leader.jpg",
-          "alt": "Mathew Fausto, Diamondbacks Patrol Leader"
+          "alt": "Mathew Fausto, Diamondbacks Patrol Leader",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -455,7 +555,9 @@
         "name": "Henry Cerulle",
         "photo": {
           "src": "/photos/officers/eagles-patrol-leader.jpg",
-          "alt": "Henry Cerulle, Eagles Patrol Leader"
+          "alt": "Henry Cerulle, Eagles Patrol Leader",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -464,7 +566,9 @@
         "name": "Liam Dougherty",
         "photo": {
           "src": "/photos/officers/falcons-patrol-leader.jpg",
-          "alt": "Liam Dougherty, Flaming Falcons Patrol Leader"
+          "alt": "Liam Dougherty, Flaming Falcons Patrol Leader",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -473,7 +577,9 @@
         "name": "Elijah Donaldson",
         "photo": {
           "src": "/photos/officers/webmaster.jpg",
-          "alt": "Elijah Donaldson, Webmaster"
+          "alt": "Elijah Donaldson, Webmaster",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -482,7 +588,9 @@
         "name": "Jack Hackert",
         "photo": {
           "src": "/photos/officers/chaplain-aide.jpg",
-          "alt": "Jack Hackert, Chaplain Aide"
+          "alt": "Jack Hackert, Chaplain Aide",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -491,7 +599,9 @@
         "name": "Thomas Truitt",
         "photo": {
           "src": "/photos/officers/historian.jpg",
-          "alt": "Thomas Truitt, Historian"
+          "alt": "Thomas Truitt, Historian",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -505,7 +615,9 @@
         "name": "Alex Joannes",
         "photo": {
           "src": "/photos/officers/outdoor-ethics-guide.jpg",
-          "alt": "Alex Joannes, Outdoor Ethics Guide"
+          "alt": "Alex Joannes, Outdoor Ethics Guide",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -514,7 +626,9 @@
         "name": "Luke Price",
         "photo": {
           "src": "/photos/officers/troop-instructor-1.jpg",
-          "alt": "Luke Price, Troop Instructor"
+          "alt": "Luke Price, Troop Instructor",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -523,7 +637,9 @@
         "name": "Jacob Arnoult",
         "photo": {
           "src": "/photos/officers/troop-instructor-2.jpg",
-          "alt": "Jacob Arnoult, Troop Instructor"
+          "alt": "Jacob Arnoult, Troop Instructor",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -532,7 +648,9 @@
         "name": "David Mariaca",
         "photo": {
           "src": "/photos/officers/recruitment-advisor.jpg",
-          "alt": "David Mariaca, Recruitment Advisor"
+          "alt": "David Mariaca, Recruitment Advisor",
+          "w": 1000,
+          "h": 1000
         }
       },
       {
@@ -541,7 +659,9 @@
         "name": "Isiah Leonard",
         "photo": {
           "src": "/photos/officers/bugler.jpg",
-          "alt": "Isiah Leonard, Bugler"
+          "alt": "Isiah Leonard, Bugler",
+          "w": 1000,
+          "h": 1000
         }
       }
     ]
@@ -557,7 +677,9 @@
       "hotspot": {
         "x": 0.5,
         "y": 0.22
-      }
+      },
+      "w": 2133,
+      "h": 2133
     },
     "steps": [
       {

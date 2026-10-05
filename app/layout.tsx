@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
-import { Anton, Source_Serif_4, Work_Sans } from "next/font/google";
+import { Archivo_Narrow, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400" });
-const sourceSerif = Source_Serif_4({ variable: "--font-source-serif", subsets: ["latin"], axes: ["opsz"] });
-const workSans = Work_Sans({ variable: "--font-work-sans", subsets: ["latin"] });
+const hanken = Hanken_Grotesk({ variable: "--font-hanken", subsets: ["latin"] });
+const archivoNarrow = Archivo_Narrow({ variable: "--font-archivo-narrow", subsets: ["latin"], weight: ["600", "700"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://t65.org"),
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${anton.variable} ${sourceSerif.variable} ${workSans.variable} antialiased`}>
+    <html lang="en" className={`${hanken.variable} ${archivoNarrow.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );

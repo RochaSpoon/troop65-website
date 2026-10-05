@@ -1,4 +1,4 @@
-export type Photo = { src: string; alt: string; hotspot?: { x: number; y: number } | null };
+export type Photo = { src: string; alt: string; hotspot?: { x: number; y: number } | null; w?: number | null; h?: number | null };
 
 export type Settings = {
   visitFormUrl: string;
@@ -17,6 +17,7 @@ export type Trip = { name: string; year: string; note?: string; image: Photo };
 export type HomePage = {
   heroKicker?: string;
   heroHeading: string;
+  boardLines?: string[];
   heroText?: string;
   heroImage: Photo;
   facts?: Fact[];

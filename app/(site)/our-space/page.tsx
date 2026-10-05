@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Photo } from "@/components/Photo";
-import { NeedsPhoto, Paragraphs, SectionMasthead, container, headline, label } from "@/components/site";
+import { Figure, NeedsPhoto, PageHeader, Paragraphs, container, heading } from "@/components/site";
 import { getOurSpace } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -10,36 +9,31 @@ export const metadata: Metadata = {
 
 export default async function OurSpacePage() {
   const page = await getOurSpace();
-  const rooms = page.rooms ?? [];
   return (
     <>
-      <SectionMasthead section="Our space" heading={page.heading} intro={page.intro} />
-
+      <PageHeader eyebrow="Our space" title={page.heading} intro={page.intro} />
       {page.size && (
         <div className={container}>
-          <div className="rule-double flex flex-wrap items-baseline gap-x-6 border-b border-ink py-4">
-            <span className={`${headline} text-[88px] text-purple md:text-[150px]`}>{page.size}</span>
-            <span className="font-sans text-[16px] font-semibold text-muted">{page.sizeLabel}</span>
-            <span className={`${label} ml-auto text-[11px]`}>{rooms.length} rooms in this guide</span>
-          </div>
+          <p className="flex flex-wrap items-baseline gap-x-5 border-y-2 border-ink py-5">
+            <span className={`${heading} text-[64px] text-purple md:text-[112px]`}>{page.size}</span>
+            <span className="text-[18px] font-semibold text-muted">{page.sizeLabel}</span>
+          </p>
         </div>
       )}
-
-      <div className={`${container} pb-20`}>
-        <ol className="grid md:grid-cols-2">
-          {rooms.map((room, i) => (
-            <li key={i} className={`border-b border-ink py-10 ${i % 2 === 1 ? "md:border-l md:pl-10" : "md:pr-10"}`}>
-              <div className="flex items-baseline gap-4">
-                <span className={`${headline} text-[44px] text-purple`}>{String(i + 1).padStart(2, "0")}</span>
-                <h2 className={`${headline} text-[32px] md:text-[40px]`}>{room.name}</h2>
+      <div className={`${container} grid gap-x-10 gap-y-14 py-16 md:grid-cols-2 md:py-20`}>
+        {(page.rooms ?? []).map((room, i) => (
+          <article key={i}>
+            {room.image?.src ? (
+              <Figure photo={room.image} sizes="(min-width: 768px) 45vw, 100vw" whole />
+            ) : (
+              <div className="aspect-[3/2]">
+                <NeedsPhoto label={room.name.toLowerCase()} />
               </div>
-              <div className="relative mt-5 aspect-[3/2] w-full">
-                {room.image?.src ? <Photo photo={room.image} sizes="(min-width: 768px) 45vw, 100vw" /> : <NeedsPhoto label={room.name.toLowerCase()} />}
-              </div>
-              <Paragraphs text={room.text} className="mt-4 text-[18px] leading-relaxed" />
-            </li>
-          ))}
-        </ol>
+            )}
+            <h2 className={`${heading} mt-5 text-[28px] md:text-[36px]`}>{room.name}</h2>
+            <Paragraphs text={room.text} className="mt-2 text-[18px] leading-relaxed text-muted" />
+          </article>
+        ))}
       </div>
     </>
   );

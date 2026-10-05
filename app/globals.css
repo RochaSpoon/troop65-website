@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* Newsletter design. Purple #7109A1 and gold #FFB308 are sampled from logo.png. */
+/* Letter board design. Purple #7109A1 and gold #FFB308 are sampled from logo.png. */
 @theme {
   --color-purple: #7109a1;
   --color-purple-deep: #4a0669;
+  --color-felt: #4e0870;
+  --color-frame: #2c2830;
   --color-gold: #ffb308;
-  --color-ink: #141114;
-  --color-paper: #fbfaf7;
-  --color-newsprint: #f0ede6;
-  --color-line: #cfc9c0;
-  --color-muted: #4d474e;
+  --color-ink: #1d1424;
+  --color-lilac: #f7f2fa;
+  --color-line: #e2d6ea;
+  --color-muted: #5b4f63;
 
-  --font-display: var(--font-anton);
-  --font-serif: var(--font-source-serif);
-  --font-sans: var(--font-work-sans);
+  --font-sans: var(--font-hanken);
+  --font-board: var(--font-archivo-narrow);
 }
 
 html {
@@ -21,30 +21,18 @@ html {
 }
 
 body {
-  background: var(--color-paper);
+  background: var(--color-lilac);
   color: var(--color-ink);
-  font-family: var(--font-serif);
+  font-family: var(--font-hanken);
 }
 
-/* Newspaper rules. */
-.rule-double {
-  border-top: 4px double var(--color-ink);
-}
-.rule-double-b {
-  border-bottom: 4px double var(--color-ink);
-}
-
-/* Opening letter of a story. */
-.dropcap > p:first-child::first-letter {
-  float: left;
-  font-family: var(--font-anton);
-  font-size: 4.6em;
-  line-height: 0.82;
-  padding: 0.06em 0.1em 0 0;
-  color: var(--color-purple);
+/* Felt letter board: ribbed felt in a dark frame. */
+.felt {
+  background-color: var(--color-felt);
+  background-image: repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.22) 0 1px, transparent 1px 9px);
 }
 
 :focus-visible {
   outline: 3px solid var(--color-gold);
-  outline-offset: 2px;
+  outline-offset: 3px;
 }
