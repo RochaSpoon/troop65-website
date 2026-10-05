@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
-/* Palette sampled from logo.png: purple #7109A1, gold #FFB308. */
+/* Newsletter design. Purple #7109A1 and gold #FFB308 are sampled from logo.png. */
 @theme {
   --color-purple: #7109a1;
   --color-purple-deep: #4a0669;
-  --color-purple-ink: #1c0828;
   --color-gold: #ffb308;
-  --color-ink: #17121b;
-  --color-paper: #ffffff;
-  --color-stone: #f3f1f4;
-  --color-line: #ddd8e0;
-  --color-muted: #5b5361;
+  --color-ink: #141114;
+  --color-paper: #fbfaf7;
+  --color-newsprint: #f0ede6;
+  --color-line: #cfc9c0;
+  --color-muted: #4d474e;
 
-  --font-shoulders: var(--font-big-shoulders);
-  --font-public: var(--font-public-sans);
+  --font-display: var(--font-anton);
+  --font-serif: var(--font-source-serif);
+  --font-sans: var(--font-work-sans);
 }
 
 html {
@@ -23,28 +23,25 @@ html {
 body {
   background: var(--color-paper);
   color: var(--color-ink);
+  font-family: var(--font-serif);
 }
 
-/* Outlined numerals, taken from the white-on-purple "65" on the badge. */
-.numeral-outline {
-  color: transparent;
-  -webkit-text-stroke: 2px currentColor;
-  paint-order: stroke fill;
+/* Newspaper rules. */
+.rule-double {
+  border-top: 4px double var(--color-ink);
+}
+.rule-double-b {
+  border-bottom: 4px double var(--color-ink);
 }
 
-.numeral-outline-purple {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--color-purple);
-}
-
-.numeral-outline-gold {
-  color: transparent;
-  -webkit-text-stroke: 2px var(--color-gold);
-}
-
-.numeral-outline-white {
-  color: transparent;
-  -webkit-text-stroke: 2px #fff;
+/* Opening letter of a story. */
+.dropcap > p:first-child::first-letter {
+  float: left;
+  font-family: var(--font-anton);
+  font-size: 4.6em;
+  line-height: 0.82;
+  padding: 0.06em 0.1em 0 0;
+  color: var(--color-purple);
 }
 
 :focus-visible {

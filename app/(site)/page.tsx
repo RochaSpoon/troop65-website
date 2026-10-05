@@ -1,12 +1,18 @@
 import Link from "next/link";
-import { Photo } from "@/components/Photo";
-import { Kicker, Numerals, VisitButton, container, display } from "@/components/site";
-import { getHome, getOurSpace, getSettings } from "@/lib/content";
+import { Figure, Kicker, Paragraphs, VisitButton, container, headline, label } from "@/components/site";
+import { getAnnouncements, getHome, getOurSpace, getSettings } from "@/lib/content";
+
+function More({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link href={href} className={`${label} mt-5 inline-block text-purple hover:underline`}>
+      {children} &rarr;
+    </Link>
+  );
+}
 
 export default async function HomePage() {
-  const [home, settings, space] = await Promise.all([getHome(), getSettings(), getOurSpace()]);
+  const [home, settings, space, announcements] = await Promise.all([getHome(), getSettings(), getOurSpace(), getAnnouncements()]);
   const trips = home.trips ?? [];
-  const [bigTrip, ...otherTrips] = trips;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -31,174 +37,167 @@ export default async function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Hero: full-width photo with a purple block holding the headline. */}
-      <section>
-        <div className="relative h-[62vh] min-h-[420px] w-full md:h-[78vh] md:max-h-[860px]">
-          <Photo photo={home.heroImage} sizes="100vw" preload position={home.heroImage.hotspot ? undefined : "50% 40%"} />
+      {/* Masthead */}
+      <div className={container}>
+        <p className={`${headline} pt-8 text-center text-[clamp(52px,12.5vw,168px)] md:pt-10`} aria-hidden="true">
+          The Purple <span className="text-purple">Plague</span>
+        </p>
+        <div className={`mt-4 flex flex-wrap justify-between gap-x-6 gap-y-1 border-y border-ink py-2 ${label} text-[11px]`}>
+          <span>Troop 65 · Long Beach, Calif.</span>
+          <span>Est. 1937</span>
+          <span className="hidden sm:inline">Meets 1st and 3rd Tuesdays</span>
+          <span>200+ Eagle Scouts</span>
         </div>
-        <div className={container}>
-          <div className="relative -mt-28 bg-purple px-6 py-8 text-white md:-mt-56 md:w-[62%] md:px-12 md:py-12">
-            {home.heroKicker && <Kicker tone="gold">{home.heroKicker}</Kicker>}
-            <h1 className={`${display} mt-4 text-[56px] font-extrabold md:text-[104px]`}>{home.heroHeading}</h1>
-            {home.heroText && (
-              <p className="mt-6 max-w-[34ch] font-public text-lg leading-relaxed text-white/90 md:text-xl">{home.heroText}</p>
-            )}
+      </div>
+
+      {/* Front page: lead story and side column */}
+      <div className={`${container} grid gap-10 py-10 md:grid-cols-12 md:gap-0 md:py-12`}>
+        <article className="md:col-span-8 md:pr-10">
+          {home.heroKicker && <Kicker>{home.heroKicker}</Kicker>}
+          <h1 className={`${headline} mt-4 text-[44px] md:text-[80px]`}>{home.heroHeading}</h1>
+          <Figure photo={home.heroImage} sizes="(min-width: 768px) 60vw, 100vw" preload className="mt-8" />
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            <Paragraphs text={home.heroText} className="dropcap text-[19px] leading-relaxed" />
+            <div className="md:self-end">
+              <VisitButton url={settings.visitFormUrl} className="w-full md:w-auto" />
+            </div>
           </div>
-        </div>
-      </section>
+        </article>
 
-      {/* Numbers, in the outlined style of the badge's "65". */}
-      {!!home.facts?.length && (
-        <section aria-label="Troop 65 by the numbers" className={`${container} pt-16 md:pt-24`}>
-          <dl className="grid grid-cols-2 border-t-4 border-ink md:grid-cols-4">
-            {home.facts.map((f, i) => (
-              <div
-                key={i}
-                className={`flex flex-col-reverse border-b border-line py-6 pr-4 md:border-b-0 md:py-8 md:pl-6 ${i > 0 ? "md:border-l" : "md:pl-0"} ${i % 2 === 1 ? "border-l pl-4" : ""}`}
-              >
-                <dt className="mt-2 font-public text-[15px] font-semibold text-muted">{f.label}</dt>
-                <dd className={`${display} numeral-outline-purple text-[72px] font-black md:text-[112px]`}>{f.number}</dd>
-              </div>
-            ))}
-          </dl>
-        </section>
-      )}
-
-      {/* A Tuesday night. */}
-      <section className={`${container} grid gap-10 py-20 md:grid-cols-12 md:py-28`}>
-        <div className="md:col-span-5">
-          <Kicker>Meetings</Kicker>
-          <h2 className={`${display} mt-3 text-[48px] font-extrabold md:text-[72px]`}>{home.tuesdayHeading}</h2>
-          {home.tuesdayText && <p className="mt-5 max-w-[38ch] font-public text-lg leading-relaxed text-muted">{home.tuesdayText}</p>}
-          {home.tuesdayImage?.src && (
-            <div className="relative mt-8 aspect-[4/3] w-full">
-              <Photo photo={home.tuesdayImage} sizes="(min-width: 768px) 40vw, 100vw" />
-            </div>
-          )}
-        </div>
-        <ol className="md:col-span-6 md:col-start-7 md:pt-16">
-          {(home.schedule ?? []).map((r, i) => (
-            <li key={i} className="grid grid-cols-[96px_1fr] gap-4 border-t border-ink py-7 md:grid-cols-[140px_1fr]">
-              <span className={`${display} text-[44px] font-black text-purple md:text-[60px]`}>{r.time}</span>
-              <span>
-                <span className="block font-public text-xl font-bold">{r.title}</span>
-                {r.text && <span className="mt-1 block font-public text-base leading-relaxed text-muted">{r.text}</span>}
-              </span>
-            </li>
-          ))}
-          {home.tuesdayNote && (
-            <li className="border-t border-ink pt-7 font-public text-base leading-relaxed text-muted">{home.tuesdayNote}</li>
-          )}
-        </ol>
-      </section>
-
-      {/* Outdoors: one big trip photo, two smaller. */}
-      {bigTrip && (
-        <section className="bg-stone py-20 md:py-28">
-          <div className={container}>
-            <div className="grid gap-6 md:grid-cols-12 md:items-end">
-              <div className="md:col-span-7">
-                <Kicker>Outdoors</Kicker>
-                <h2 className={`${display} mt-3 text-[48px] font-extrabold md:text-[72px]`}>{home.outdoorsHeading}</h2>
-              </div>
-              {home.outdoorsText && (
-                <p className="max-w-[40ch] font-public text-lg leading-relaxed text-muted md:col-span-4 md:col-start-9">{home.outdoorsText}</p>
-              )}
-            </div>
-            <div className="mt-12 grid gap-4 md:grid-cols-12 md:grid-rows-2">
-              {[bigTrip, ...otherTrips].map((t, i) => (
-                <figure key={i} className={`relative ${i === 0 ? "md:col-span-7 md:row-span-2" : "md:col-span-5"}`}>
-                  <div
-                    className={`relative w-full ${i === 0 ? "aspect-square md:aspect-auto md:h-full md:min-h-[640px]" : "aspect-[4/3] md:aspect-auto md:h-full md:min-h-[312px]"}`}
-                  >
-                    <Photo photo={t.image} sizes={i === 0 ? "(min-width: 768px) 58vw, 100vw" : "(min-width: 768px) 42vw, 100vw"} />
-                  </div>
-                  <figcaption className="absolute bottom-0 left-0 bg-ink px-5 py-3 font-public text-white">
-                    <span className="font-bold">{t.name}</span> <span className="text-gold">{t.year}</span>
-                    {t.note && <span className="block text-sm text-white/75">{t.note}</span>}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-            <Link href="/what-we-do" className="mt-10 inline-block border-b-2 border-purple pb-1 font-public font-bold text-purple">
-              See what we do
+        <aside className="md:col-span-4 md:border-l md:border-ink md:pl-10">
+          <div className="border-4 border-double border-ink p-5">
+            <p className={`${label} text-purple`}>Next meetings</p>
+            <p className={`${headline} mt-2 text-[30px]`}>{settings.meetingDays}</p>
+            <p className="mt-2 text-[17px]">
+              {settings.meetingTime}
+              <br />
+              {settings.meetingPlace}
+              <br />
+              {settings.meetingAddress}
+            </p>
+            <Link href="/join" className={`${label} mt-4 inline-block text-purple hover:underline`}>
+              What a first visit looks like &rarr;
             </Link>
           </div>
+
+          {!!home.facts?.length && (
+            <dl className="mt-8">
+              {home.facts.map((f, i) => (
+                <div key={i} className="flex items-baseline gap-4 border-b border-ink py-3 first:border-t">
+                  <dd className={`${headline} w-[120px] shrink-0 text-[48px] ${i < 2 ? "text-purple" : ""}`}>{f.number}</dd>
+                  <dt className="text-[16px] leading-snug text-muted">{f.label}</dt>
+                </div>
+              ))}
+            </dl>
+          )}
+
+          {!!announcements.length && (
+            <div className="mt-8">
+              <Kicker>Bulletin board</Kicker>
+              <ul className="mt-3">
+                {announcements.slice(0, 2).map((a) => (
+                  <li key={a._id} className="border-b border-line py-4">
+                    <p className="font-sans text-[17px] font-bold leading-snug">{a.title}</p>
+                    <p className="mt-1 line-clamp-3 text-[15px] leading-snug text-muted">{a.body}</p>
+                  </li>
+                ))}
+              </ul>
+              <More href="/troop">All troop news</More>
+            </div>
+          )}
+        </aside>
+      </div>
+
+      {/* Three columns of stories */}
+      <div className={`${container} rule-double grid md:grid-cols-3`}>
+        <section className="border-b border-ink py-10 md:border-b-0 md:pr-8">
+          <Kicker>Meetings</Kicker>
+          <h2 className={`${headline} mt-4 text-[36px]`}>{home.tuesdayHeading}</h2>
+          {home.tuesdayText && <p className="mt-3 text-[17px] leading-relaxed">{home.tuesdayText}</p>}
+          <ol className="mt-5">
+            {(home.schedule ?? []).map((r, i) => (
+              <li key={i} className="grid grid-cols-[80px_1fr] gap-3 border-t border-line py-3">
+                <span className={`${headline} text-[30px] text-purple`}>{r.time}</span>
+                <span>
+                  <span className="block font-sans text-[16px] font-bold">{r.title}</span>
+                  {r.text && <span className="block text-[15px] text-muted">{r.text}</span>}
+                </span>
+              </li>
+            ))}
+          </ol>
+          {home.tuesdayNote && <p className="border-t border-line pt-3 text-[15px] italic text-muted">{home.tuesdayNote}</p>}
+          <More href="/about">How the troop runs</More>
         </section>
-      )}
 
-      {/* Eagle Lair. */}
-      <section className="bg-purple-ink text-white">
-        <div className="mx-auto grid max-w-[1360px] gap-10 pb-16 md:grid-cols-12 md:pb-0">
-          <div className="px-5 pt-20 md:col-span-6 md:px-10 md:py-28">
-            {home.lairKicker && <Kicker tone="gold">{home.lairKicker}</Kicker>}
-            <h2 className={`${display} mt-3 text-[48px] font-extrabold md:text-[72px]`}>
-              <Numerals text={home.lairHeading ?? ""} outline="numeral-outline-gold" />
-            </h2>
-            {home.lairText && <p className="mt-6 max-w-[42ch] font-public text-lg leading-relaxed text-white/85">{home.lairText}</p>}
-          </div>
-          {home.lairImage?.src && (
-            <div className="relative mx-5 aspect-[3.3/1] self-center md:col-span-6 md:mx-0 md:mr-10">
-              <Photo photo={home.lairImage} sizes="(min-width: 768px) 50vw, 100vw" />
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Our space. */}
-      <section className={`${container} grid gap-12 py-20 md:grid-cols-12 md:py-28`}>
-        <div className="md:col-span-5">
-          <Kicker>Our space</Kicker>
-          <h2 className={`${display} mt-3 text-[48px] font-extrabold md:text-[72px]`}>{home.spaceHeading}</h2>
-          {space.size && <p className={`${display} numeral-outline-purple mt-8 text-[88px] font-black md:text-[128px]`}>{space.size}</p>}
-          {space.sizeLabel && <p className="mt-3 font-public text-[15px] font-semibold text-muted">{space.sizeLabel}</p>}
-          <Link href="/our-space" className="mt-10 inline-block border-b-2 border-purple pb-1 font-public font-bold text-purple">
-            Walk through the rooms
-          </Link>
-        </div>
-        <div className="md:col-span-6 md:col-start-7">
-          {home.spaceImage?.src && (
-            <div className="relative aspect-square w-full">
-              <Photo photo={home.spaceImage} sizes="(min-width: 768px) 46vw, 100vw" position={home.spaceImage.hotspot ? undefined : "50% 35%"} />
-            </div>
-          )}
-          <ul className="mt-8 grid font-public text-[17px] font-semibold sm:grid-cols-2 sm:gap-x-8">
-            {(space.rooms ?? []).map((r, i) => (
-              <li key={i} className="border-t border-line py-3">
-                {r.name}
+        <section className="border-b border-ink py-10 md:border-b-0 md:border-l md:px-8">
+          <Kicker>Outdoors</Kicker>
+          <h2 className={`${headline} mt-4 text-[36px]`}>{home.outdoorsHeading}</h2>
+          {trips[0] && <Figure photo={trips[0].image} sizes="(min-width: 768px) 30vw, 100vw" aspect="aspect-[4/3]" caption={false} className="mt-5" />}
+          {home.outdoorsText && <p className="mt-4 text-[17px] leading-relaxed">{home.outdoorsText}</p>}
+          <ul className="mt-4">
+            {trips.map((t, i) => (
+              <li key={i} className="flex items-baseline justify-between gap-3 border-t border-line py-2.5">
+                <span className="font-sans text-[16px] font-bold">{t.name}</span>
+                <span className={`${label} text-[11px] text-muted`}>
+                  {t.note ? `${t.note}, ` : ""}
+                  {t.year}
+                </span>
               </li>
             ))}
           </ul>
+          <More href="/what-we-do">Read the trip reports</More>
+        </section>
+
+        <section className="py-10 md:border-l md:border-ink md:pl-8">
+          <Kicker>{home.lairKicker || "The Eagle Lair"}</Kicker>
+          <h2 className={`${headline} mt-4 text-[36px]`}>{home.lairHeading}</h2>
+          {home.lairImage?.src && <Figure photo={home.lairImage} sizes="(min-width: 768px) 30vw, 100vw" aspect="aspect-[3.3/1]" caption={false} className="mt-5" />}
+          <Paragraphs text={home.lairText} className="mt-4 text-[17px] leading-relaxed" />
+          <More href="/about">About the Eagle Lair</More>
+        </section>
+      </div>
+
+      {/* Our space */}
+      <section className="border-y border-ink bg-newsprint">
+        <div className={`${container} grid gap-8 py-12 md:grid-cols-12 md:py-16`}>
+          {home.spaceImage?.src && (
+            <Figure photo={home.spaceImage} sizes="(min-width: 768px) 40vw, 100vw" aspect="aspect-square" className="md:col-span-5" />
+          )}
+          <div className="md:col-span-7 md:pl-6">
+            <Kicker>Our space</Kicker>
+            <h2 className={`${headline} mt-4 text-[44px] md:text-[64px]`}>{home.spaceHeading}</h2>
+            {space.size && (
+              <p className="mt-4 flex items-baseline gap-4">
+                <span className={`${headline} text-[72px] text-purple md:text-[96px]`}>{space.size}</span>
+                {space.sizeLabel && <span className="font-sans text-[15px] font-semibold text-muted">{space.sizeLabel}</span>}
+              </p>
+            )}
+            <ol className="mt-4 columns-1 gap-8 sm:columns-2">
+              {(space.rooms ?? []).map((r, i) => (
+                <li key={i} className="flex break-inside-avoid gap-3 border-t border-ink py-2.5 font-sans text-[16px] font-semibold">
+                  <span className="w-6 text-purple">{String(i + 1).padStart(2, "0")}</span>
+                  {r.name}
+                </li>
+              ))}
+            </ol>
+            <More href="/our-space">Walk through the rooms</More>
+          </div>
         </div>
       </section>
 
-      {/* Visit. */}
+      {/* Visit */}
       <section className="bg-purple text-white">
-        <div className={`${container} grid gap-10 py-20 md:grid-cols-12 md:py-28`}>
-          <div className="md:col-span-6">
-            <h2 className={`${display} text-[56px] font-extrabold md:text-[96px]`}>{home.joinHeading}</h2>
-            {home.joinText && <p className="mt-6 max-w-[40ch] font-public text-lg leading-relaxed text-white/90">{home.joinText}</p>}
-            <VisitButton url={settings.visitFormUrl} className="mt-8" />
+        <div className={`${container} grid gap-8 py-14 md:grid-cols-12 md:items-end md:py-20`}>
+          <div className="md:col-span-7">
+            <h2 className={`${headline} text-[52px] md:text-[96px]`}>{home.joinHeading}</h2>
+            {home.joinText && <p className="mt-5 max-w-[44ch] text-[19px] leading-relaxed text-white/90">{home.joinText}</p>}
           </div>
-          <dl className="font-public md:col-span-5 md:col-start-8">
-            {[
-              ["When", `${settings.meetingDays}, ${settings.meetingTime}`],
-              ["Where", `${settings.meetingPlace}, ${settings.meetingAddress}`],
-            ].map(([k, v]) => (
-              <div key={k} className="border-t border-white/30 py-5">
-                <dt className="text-[13px] font-bold uppercase tracking-[0.18em] text-gold">{k}</dt>
-                <dd className="mt-1 text-lg">{v}</dd>
-              </div>
-            ))}
-            <div className="border-t border-white/30 py-5">
-              <dt className="text-[13px] font-bold uppercase tracking-[0.18em] text-gold">First time?</dt>
-              <dd className="mt-1 text-lg">
-                <Link href="/join" className="underline underline-offset-4 hover:text-gold">
-                  What a first visit looks like
-                </Link>
-              </dd>
-            </div>
-          </dl>
+          <div className="md:col-span-5">
+            <p className="text-[17px] text-white/90">
+              {settings.meetingDays}, {settings.meetingTime}. {settings.meetingPlace}.
+            </p>
+            <VisitButton url={settings.visitFormUrl} tone="gold" className="mt-5 w-full md:w-auto" />
+          </div>
         </div>
       </section>
     </>

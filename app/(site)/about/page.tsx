@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutPage() {
-  return <SectionsPage kicker="About" page={await getAbout()} />;
+  return <SectionsPage section="About" kind="article" page={await getAbout()} />;
 }

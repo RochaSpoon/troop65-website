@@ -8,7 +8,7 @@ import { navItems, troopItem } from "@/lib/nav";
 export function NavLinks() {
   const path = usePathname();
   return (
-    <ul className="flex gap-7 font-public text-[15px] font-semibold">
+    <ul className="flex gap-6 font-sans text-[13px] font-bold uppercase tracking-[0.1em]">
       {[...navItems, troopItem].map((n) => {
         const active = path === n.href || path.startsWith(n.href + "/");
         return (
@@ -32,16 +32,16 @@ export function MobileMenu() {
   return (
     // Keyed by path so the menu closes after navigating.
     <details key={path} className="relative lg:hidden">
-      <summary className="cursor-pointer list-none border-2 border-ink px-3 py-2 font-public text-sm font-bold uppercase tracking-wider">
+      <summary className="cursor-pointer list-none border border-ink px-3 py-2 font-sans text-[13px] font-bold uppercase tracking-[0.1em]">
         Menu
       </summary>
-      <ul className="absolute right-0 z-40 mt-2 w-60 border border-line bg-paper p-2 font-public text-[17px] font-semibold">
+      <ul className="absolute right-0 z-40 mt-2 w-60 border border-ink bg-paper p-2 font-sans text-[16px] font-semibold">
         {[...navItems, troopItem].map((n) => (
           <li key={n.href}>
             <Link
               href={n.href}
               aria-current={path === n.href ? "page" : undefined}
-              className={`block px-3 py-3 hover:bg-stone ${path === n.href ? "text-purple" : ""}`}
+              className={`block px-3 py-3 hover:bg-newsprint ${path === n.href ? "text-purple" : ""}`}
             >
               {n.label}
             </Link>

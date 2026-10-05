@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Big_Shoulders, Public_Sans } from "next/font/google";
+import { Anton, Source_Serif_4, Work_Sans } from "next/font/google";
 import "./globals.css";
 
-const bigShoulders = Big_Shoulders({
-  variable: "--font-big-shoulders",
-  subsets: ["latin"],
-  fallback: ["Arial Narrow", "Arial", "sans-serif"],
-  adjustFontFallback: false,
-});
-const publicSans = Public_Sans({ variable: "--font-public-sans", subsets: ["latin"] });
+const anton = Anton({ variable: "--font-anton", subsets: ["latin"], weight: "400" });
+const sourceSerif = Source_Serif_4({ variable: "--font-source-serif", subsets: ["latin"], axes: ["opsz"] });
+const workSans = Work_Sans({ variable: "--font-work-sans", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://t65.org"),
@@ -29,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${bigShoulders.variable} ${publicSans.variable} antialiased`}>
+    <html lang="en" className={`${anton.variable} ${sourceSerif.variable} ${workSans.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );
