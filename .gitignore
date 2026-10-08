@@ -36,13 +36,7 @@ yarn-error.log*
 # vercel
 .vercel
 
-# local tooling cache
-.impeccable/
-.claude/
-
-# raw photo dumps (originals) — processed copies live in public/images/
-/summer camp/
-
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+!.env.example

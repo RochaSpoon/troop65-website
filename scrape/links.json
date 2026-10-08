@@ -1,0 +1,247 @@
+[
+  {
+    "kind": "email-list",
+    "element": "link",
+    "text": "HERE",
+    "url": "https://lists.simplelists.com/troop65/subscribe/",
+    "pages": [
+      "home",
+      "about",
+      "announcements",
+      "calendar",
+      "patrols",
+      "troop-officers",
+      "adult-leaders",
+      "t65-eagle-lair",
+      "outdoor-activities-and-events",
+      "helpful-links",
+      "resource-center",
+      "training"
+    ]
+  },
+  {
+    "kind": "map-embed",
+    "element": "iframe",
+    "text": "",
+    "url": "https://maps-api-ssl.google.com/maps?hl=en-US&ll=33.840076,-118.135113&output=embed&q=4515+Sunfield+Ave,+Long+Beach,+CA+90808,+USA+(4515+Sunfield+Ave)&z=14",
+    "pages": [
+      "about"
+    ]
+  },
+  {
+    "kind": "email-list",
+    "element": "link",
+    "text": "HERE",
+    "url": "https://www.simplelists.com/subscribe/troop65/",
+    "pages": [
+      "about"
+    ]
+  },
+  {
+    "kind": "form",
+    "element": "link",
+    "text": "SIGN UP HERE",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdsloIKayiBL8Gmsi1dGuxzQHe77AF_eJc4cwRNkQQc2HEIoA/viewform",
+    "pages": [
+      "announcements"
+    ]
+  },
+  {
+    "kind": "calendar",
+    "element": "iframe",
+    "text": "",
+    "url": "https://www.google.com/calendar/embed?color=%23668CD9&color=%23D96666&embed_style=WyJhdDplbWI6c3QiLCIjZTBlMGUwIiwiI2VkZWRlZCIsIiM0MTg0ZjMiLCJyb2JvdG8iLCIjNjM2MzYzIiw1MDAsIiNmZmYiXQo&eopt=0&mode=agenda&showCalendars=1&showPrint=0&showTz=0&src=bsatroop65longbeach@t65.org&src=scoutwebmaster@t65.org",
+    "pages": [
+      "calendar"
+    ]
+  },
+  {
+    "kind": "calendar",
+    "element": "link",
+    "text": "Open Calendar in new window",
+    "url": "https://www.google.com/calendar/embed?color=%23668CD9&color=%23D96666&src=bsatroop65longbeach@t65.org&src=scoutwebmaster@t65.org",
+    "pages": [
+      "calendar"
+    ]
+  },
+  {
+    "kind": "google-doc",
+    "element": "iframe",
+    "text": "",
+    "url": "https://docs.google.com/spreadsheets/d/14oY3bGrfJztlJZWMqr11TLacFo2mbj53i73wp-C1VP4/htmlembed",
+    "pages": [
+      "patrols"
+    ]
+  },
+  {
+    "kind": "google-doc",
+    "element": "embed",
+    "text": "Open Spreadsheet, Troop Duties Schedule in new window",
+    "url": "https://drive.google.com/open?id=14oY3bGrfJztlJZWMqr11TLacFo2mbj53i73wp-C1VP4",
+    "pages": [
+      "patrols"
+    ]
+  },
+  {
+    "kind": "google-doc",
+    "element": "iframe",
+    "text": "",
+    "url": "https://docs.google.com/document/d/1jEvGEVMwkCddvJ_jWgKChrNVEYafPeIp10eOoJssco4/preview",
+    "pages": [
+      "adult-leaders"
+    ]
+  },
+  {
+    "kind": "google-doc",
+    "element": "embed",
+    "text": "Open Document, Adult Leaders in new window",
+    "url": "https://drive.google.com/open?id=1jEvGEVMwkCddvJ_jWgKChrNVEYafPeIp10eOoJssco4",
+    "pages": [
+      "adult-leaders"
+    ]
+  },
+  {
+    "kind": "google-doc",
+    "element": "iframe",
+    "text": "",
+    "url": "https://docs.google.com/document/d/1AK3FooUJywt_tYsSnGcp_zy13gHwuzuliTuJXlszn0w/preview",
+    "pages": [
+      "outdoor-activities-and-events"
+    ]
+  },
+  {
+    "kind": "google-doc",
+    "element": "embed",
+    "text": "Open Document, 2025 Troop Activity Schedule in new window",
+    "url": "https://drive.google.com/open?id=1AK3FooUJywt_tYsSnGcp_zy13gHwuzuliTuJXlszn0w",
+    "pages": [
+      "outdoor-activities-and-events"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "SIGN UP",
+    "url": "https://beascout.scouting.org/list/?zip=90712&program%5B%5D=pack&program%5B%5D=scoutsBSA&unitID=210515",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "LINK",
+    "url": "https://www.longbeachbsa.org/",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "BSA Merit Badge Support",
+    "url": "https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/merit-badges/",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Blue Card pdf",
+    "url": "https://www.cccbsa.org/wp-content/uploads/mb-app-blue-card-fillable_.pdf",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Scouting America: Medical Forms",
+    "url": "https://www.scouting.org/health-and-safety/ahmr/",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Review possible questions for Board of Review",
+    "url": "https://www.boyscouttrail.com/boardofreview.asp",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Rank Advancement Requirements",
+    "url": "https://www.scouting.org/wp-content/uploads/2019/02/Scouts-BSA-Requirements-3321619.pdf",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Eagle Project Workbook",
+    "url": "https://www.scouting.org/wp-content/uploads/2021/02/EagleProjectWorkbook2021c-v2.pdf",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "National Outdoor Awards Program",
+    "url": "https://www.scouting.org/programs/scouts-bsa/advancement-and-awards/noa/",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Merit Badge Counselor",
+    "url": "https://filestore.scouting.org/filestore/pdf/34405.pdf?_gl=1*1wf216g*_ga*MTY0MTM4MDUyNy4xNjYwNDA5MDQy*_ga_20G0JHESG4*MTY2MDQwOTA0MS4xLjEuMTY2MDQwOTk0Ny42MA..&_ga=2.253773646.790277186.1660409042-1641380527.1660409042",
+    "pages": [
+      "helpful-links"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "",
+    "url": "https://scoutbook.scouting.org/?_ga=2.145107698.790277186.1660409042-1641380527.1660409042&_gl=1*5jfjx4*_ga*MTY0MTM4MDUyNy4xNjYwNDA5MDQy*_ga_20G0JHESG4*MTY2MDQwOTA0MS4xLjEuMTY2MDQwOTA2Ni4zNQ..",
+    "pages": [
+      "resource-center"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "HERE",
+    "url": "https://www.scouting.org/training/youth-protection/",
+    "pages": [
+      "training"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "Long Beach Area Council's Training Calendar",
+    "url": "https://www.longbeachbsa.org/training/",
+    "pages": [
+      "training"
+    ]
+  },
+  {
+    "kind": "link",
+    "element": "link",
+    "text": "NYLT Leadership across the country. See all the locations!",
+    "url": "https://nylt-leadershipacademy.org/",
+    "pages": [
+      "training"
+    ]
+  }
+]

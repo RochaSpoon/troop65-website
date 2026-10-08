@@ -1,67 +1,68 @@
-export interface QuickStat {
-  label: string;
-  value: string;
-  detail?: string;
-}
+export type Photo = { src: string; alt: string; hotspot?: { x: number; y: number } | null; w?: number | null; h?: number | null };
 
-export type EventCategory =
-  | "campout"
-  | "high-adventure"
-  | "service"
-  | "ceremony"
-  | "meeting"
-  | "fundraiser";
+export type Settings = {
+  visitFormUrl: string;
+  meetingDays: string;
+  meetingTime: string;
+  meetingPlace: string;
+  meetingAddress: string;
+  emailListUrl?: string;
+  beAScoutUrl?: string;
+};
 
-export interface TroopEvent {
-  slug: string;
-  title: string;
-  /** ISO date, e.g. "2026-09-12" */
-  date: string;
-  endDate?: string;
-  category: EventCategory;
-  location: string;
-  summary: string;
-  /** Set true once the event has happened — powers the recap grid instead of the upcoming list */
-  isPast: boolean;
-  image: {
-    src: string;
-    alt: string;
-  };
-}
+export type Fact = { number: string; label: string };
+export type ScheduleItem = { time: string; title: string; text?: string };
+export type Trip = { name: string; year: string; note?: string; image: Photo };
 
-export interface AdultLeader {
-  name: string;
-  role: string;
-  bio: string;
-  photo: {
-    src: string;
-    alt: string;
-  };
-}
+export type HomePage = {
+  heroKicker?: string;
+  heroHeading: string;
+  bannerImage?: Photo | null;
+  heroText?: string;
+  heroImage?: Photo | null;
+  facts?: Fact[];
+  tuesdayHeading?: string;
+  tuesdayText?: string;
+  tuesdayImage?: Photo;
+  schedule?: ScheduleItem[];
+  tuesdayNote?: string;
+  outdoorsHeading?: string;
+  outdoorsText?: string;
+  trips?: Trip[];
+  lairKicker?: string;
+  lairHeading?: string;
+  lairText?: string;
+  lairImage?: Photo;
+  spaceHeading?: string;
+  spaceImage?: Photo;
+  joinHeading?: string;
+  joinText?: string;
+};
 
-export interface YouthPosition {
-  title: string;
-  reportsTo: string;
-  description: string;
-  /** Current holder, when known. Omit to describe the role generically. */
-  name?: string;
-}
+export type TextSection = { heading: string; text?: string; images?: Photo[] };
+export type SectionsPage = { heading: string; intro?: string; heroImage?: Photo; sections?: TextSection[] };
 
-export interface Testimonial {
-  quote: string;
-  name: string;
-  role: string;
-}
+export type Room = { name: string; text?: string; image?: Photo };
+export type OurSpacePage = { heading: string; intro?: string; heroImage?: Photo; size?: string; sizeLabel?: string; rooms?: Room[] };
 
-export interface Announcement {
-  title: string;
-  date: string;
-  body: string;
-}
+export type Officer = { name: string; position: string; photo?: Photo };
+export type LeadershipPage = { heading: string; intro?: string; officers?: Officer[] };
 
-export interface MemberForm {
-  title: string;
-  description: string;
-  href: string;
-  fileType: string;
-}
+export type Step = { heading: string; text?: string };
+export type JoinPage = {
+  heading: string;
+  intro?: string;
+  heroImage?: Photo;
+  steps?: Step[];
+  whoCanJoin?: string;
+  whatToBring?: string;
+  cost?: string;
+  signUpText?: string;
+};
+
+export type LinkItem = { label: string; url: string };
+export type LinkGroup = { title: string; links?: LinkItem[] };
+export type DocLink = { label: string; note?: string; url: string };
+export type TroopPage = { heading: string; intro?: string; calendarEmbedUrl?: string; linkGroups?: LinkGroup[]; documents?: DocLink[] };
+
+export type Announcement = { _id: string; title: string; date?: string; body: string; linkLabel?: string; linkUrl?: string };
