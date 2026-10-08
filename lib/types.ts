@@ -42,7 +42,7 @@ export type HomePage = {
 export type TextSection = { heading: string; text?: string; images?: Photo[] };
 export type SectionsPage = { heading: string; intro?: string; heroImage?: Photo; sections?: TextSection[] };
 
-export type Room = { name: string; text?: string; image?: Photo };
+export type Room = { name: string; text?: string; image?: Photo; gallery?: Photo[] };
 export type OurSpacePage = { heading: string; intro?: string; heroImage?: Photo; size?: string; sizeLabel?: string; rooms?: Room[] };
 
 export type Officer = { name: string; position: string; photo?: Photo };

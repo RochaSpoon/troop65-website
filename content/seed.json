@@ -119,8 +119,8 @@
     "lairImage": {
       "src": "/photos/eagle-lair/panel-060.jpg",
       "alt": "Leather Eagle Lair panel hanging from a branch, burned with the names of Troop 65 Eagle Scouts from 2017 to 2019",
-      "w": 1021,
-      "h": 1400
+      "w": 1200,
+      "h": 1645
     },
     "spaceHeading": "A basement of our own",
     "spaceImage": {
@@ -171,44 +171,44 @@
           {
             "src": "/photos/eagle-lair/panel-053.jpg",
             "alt": "Eagle Lair leather panels hanging on the wall, burned with Eagle Scout names from 2006 to 2008",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           },
           {
             "src": "/photos/eagle-lair/panel-044.jpg",
             "alt": "The oldest Eagle Lair panel, with names from 1954 to 1985",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           },
           {
             "src": "/photos/eagle-lair/panel-046.jpg",
             "alt": "Faded Eagle Lair panel with names from 1985 to 1990",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           },
           {
             "src": "/photos/eagle-lair/panel-049.jpg",
             "alt": "Eagle Lair panel hanging from a branch, names from 2003 to 2004",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           },
           {
             "src": "/photos/eagle-lair/panel-051.jpg",
             "alt": "Eagle Lair panel with names from 2004 to 2006",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           },
           {
             "src": "/photos/eagle-lair/panel-055.jpg",
             "alt": "Eagle Lair panel with names from 2011 to 2013",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           },
           {
             "src": "/photos/eagle-lair/panel-061.jpg",
             "alt": "Eagle Lair panel with names from 2020 to 2023",
-            "w": 1021,
-            "h": 1400
+            "w": 1200,
+            "h": 1645
           }
         ]
       },
@@ -448,13 +448,125 @@
         "image": {
           "src": "/photos/eagle-lair/panel-060.jpg",
           "alt": "Leather Eagle Lair panel hanging from a branch, burned with the names of Troop 65 Eagle Scouts from 2017 to 2019",
-          "w": 1021,
-          "h": 1400
-        }
-      },
-      {
-        "_type": "room",
-        "name": "Chapel"
+          "w": 1200,
+          "h": 1645
+        },
+        "gallery": [
+          {
+            "src": "/photos/eagle-lair/panel-044.jpg",
+            "alt": "The oldest Eagle Lair panel, with names from 1954 to 1985",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-046.jpg",
+            "alt": "Faded gray Eagle Lair panel with names from 1985 to 1990",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-048.jpg",
+            "alt": "Closer view of the 1985 to 1990 Eagle Lair panel",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-045.jpg",
+            "alt": "Eagle Lair panel with names from 1994 to 1997",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-050.jpg",
+            "alt": "Eagle Lair panel with names from 1998 to 2000",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-047.jpg",
+            "alt": "Eagle Lair panel with names from 2001 to 2002",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-049.jpg",
+            "alt": "Eagle Lair panel with names from 2003 to 2004",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-051.jpg",
+            "alt": "Eagle Lair panel with names from 2004 to 2006",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-052.jpg",
+            "alt": "Eagle Lair panel with names from 2006 to 2008",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-053.jpg",
+            "alt": "Wider view of the 2006 to 2008 Eagle Lair panel, with its neighbors on the wall",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-054.jpg",
+            "alt": "Eagle Lair panel with names from 2008 to 2011",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-055.jpg",
+            "alt": "Eagle Lair panel with names from 2011 to 2013",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-056.jpg",
+            "alt": "Eagle Lair panel with names from 2013 to 2015",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-057.jpg",
+            "alt": "Second view of the 2013 to 2015 Eagle Lair panel",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-058.jpg",
+            "alt": "Eagle Lair panel with names from 2015 to 2017",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-059.jpg",
+            "alt": "Second view of the 2015 to 2017 Eagle Lair panel",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-060.jpg",
+            "alt": "Eagle Lair panel with names from 2017 to 2019",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-061.jpg",
+            "alt": "Eagle Lair panel with names from 2020 to 2023",
+            "w": 1200,
+            "h": 1645
+          },
+          {
+            "src": "/photos/eagle-lair/panel-062.jpg",
+            "alt": "The newest Eagle Lair panel, with names from 2023 to 2024",
+            "w": 1200,
+            "h": 1645
+          }
+        ]
       },
       {
         "_type": "room",
@@ -467,11 +579,7 @@
       },
       {
         "_type": "room",
-        "name": "Conference room"
-      },
-      {
-        "_type": "room",
-        "name": "Parent meeting room"
+        "name": "Parent and conference room"
       }
     ]
   },
