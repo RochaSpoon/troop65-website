@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Photo } from "@/components/Photo";
-import { Eyebrow, Figure, VisitButton, container, heading } from "@/components/site";
+import { EmailButton, Eyebrow, Figure, VisitButton, container, heading } from "@/components/site";
 import type { Photo as PhotoType } from "@/lib/types";
 import { getHome, getOurSpace, getSettings } from "@/lib/content";
 
@@ -53,7 +53,10 @@ export default async function HomePage() {
         </div>
         <div className="md:col-span-5">
           {home.heroText && <p className="max-w-[40ch] text-[19px] leading-relaxed text-muted">{home.heroText}</p>}
-          <VisitButton url={settings.visitFormUrl} className="mt-6" />
+          <div className="mt-6 flex flex-wrap gap-3">
+            <VisitButton url={settings.visitFormUrl} />
+            <EmailButton url={settings.emailListUrl} />
+          </div>
         </div>
       </section>
 
@@ -161,7 +164,10 @@ export default async function HomePage() {
             <Eyebrow tone="gold">Visit</Eyebrow>
             <h2 className={`${heading} mt-3 text-[48px] md:text-[84px]`}>{home.joinHeading}</h2>
             {home.joinText && <p className="mt-5 max-w-[40ch] text-[19px] leading-relaxed text-white/90">{home.joinText}</p>}
-            <VisitButton url={settings.visitFormUrl} tone="gold" className="mt-7" />
+            <div className="mt-7 flex flex-wrap gap-3">
+              <VisitButton url={settings.visitFormUrl} tone="gold" />
+              <EmailButton url={settings.emailListUrl} tone="white" />
+            </div>
           </div>
           <dl className="md:col-span-5 md:col-start-8">
             {[
