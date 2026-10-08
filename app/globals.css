@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Letter board design. Purple #7109A1 and gold #FFB308 are sampled from logo.png. */
+/* Purple #7109A1 and gold #FFB308 are sampled from logo.png. */
 @theme {
   --color-purple: #7109a1;
   --color-purple-deep: #4a0669;
@@ -26,7 +26,7 @@ body {
   font-family: var(--font-hanken);
 }
 
-/* Felt letter board: ribbed felt in a dark frame. */
+/* Ribbed felt texture, used behind the "65" on officers without a photo. */
 .felt {
   background-color: var(--color-felt);
   background-image: repeating-linear-gradient(to bottom, rgb(0 0 0 / 0.22) 0 1px, transparent 1px 9px);

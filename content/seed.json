@@ -131,14 +131,12 @@
     },
     "joinHeading": "Come see a meeting",
     "joinText": "Bring your scout on a Tuesday night. Fill out the form so we know to expect you.",
-    "boardLines": [
-      "Welcome to",
-      "*Troop 65",
-      "-The Purple Plague",
-      "1st & 3rd Tuesdays",
-      "6:30 to 8:30 pm",
-      "-Downstairs · New scouts welcome"
-    ]
+    "bannerImage": {
+      "src": "/photos/troop65-banner.jpg",
+      "alt": "Troop 65 banner: the troop in uniform on the beach at sunset in Long Beach, with the words Troop 65, Adventure, Leadership, Service, Long Beach, Since 1937, t65.org",
+      "w": 2560,
+      "h": 992
+    }
   },
   "aboutPage": {
     "_id": "aboutPage",

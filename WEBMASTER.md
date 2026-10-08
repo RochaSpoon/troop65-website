@@ -27,7 +27,7 @@ If you see **[NEEDS INFO]** on the site, it means we don't know that fact yet. A
 
 Meeting days, time, and address are in **Site settings**. Change them there and they update everywhere.
 
-**The purple letter board** at the top of the Home page is under **Home page > Top > Letter board**. Each box is one line on the board. Keep lines short (about 22 letters). Start a line with `*` to make it gold, or with `-` to make it smaller. Leave it empty and the site shows the standard welcome board.
+**The banner** across the top of the Home page is under **Home page > Top > Banner**. Use **Replace** to swap it for a new image and fill in **Describe the photo** with what the banner shows and says. It is never cropped, so any size works. If you remove it, the standard Troop 65 banner comes back.
 
 ## 2. Add, remove, or reorder officers
 

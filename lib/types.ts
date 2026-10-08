@@ -17,9 +17,9 @@ export type Trip = { name: string; year: string; note?: string; image: Photo };
 export type HomePage = {
   heroKicker?: string;
   heroHeading: string;
-  boardLines?: string[];
+  bannerImage?: Photo | null;
   heroText?: string;
-  heroImage: Photo;
+  heroImage?: Photo | null;
   facts?: Fact[];
   tuesdayHeading?: string;
   tuesdayText?: string;

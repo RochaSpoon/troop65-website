@@ -97,59 +97,6 @@ export function VisitButton({ url, className = "", tone = "purple" }: { url: str
   );
 }
 
-/** Splits a line into letters, each pushed in slightly crooked. Fixed offsets, so it renders the same every time. */
-function BoardLine({ text, row }: { text: string; row: number }) {
-  return (
-    <>
-      {[...text].map((ch, i) =>
-        ch === " " ? (
-          " "
-        ) : (
-          <span
-            key={i}
-            className="inline-block"
-            style={{ transform: `translateY(${(((i * 7 + row * 13) % 11) % 3) - 1}px) rotate(${(((i * 7 + row * 13) % 11) - 5) * 0.35}deg)` }}
-          >
-            {ch}
-          </span>
-        ),
-      )}
-    </>
-  );
-}
-
-/**
- * The felt letter board. Lines come from Studio. A line starting with "*" is set in gold;
- * a line starting with "-" is set smaller.
- */
-export function LetterBoard({ lines, className = "" }: { lines: string[]; className?: string }) {
-  const clean = lines.map((l) => l.replace(/^[*-]\s*/, ""));
-  return (
-    <div
-      role="img"
-      aria-label={`Letter board: ${clean.join(". ")}.`}
-      className={`felt rounded-md border-[14px] border-frame px-[clamp(14px,3vw,36px)] py-[clamp(22px,4vw,44px)] ${className}`}
-    >
-      <div aria-hidden="true" className="space-y-[clamp(4px,1vw,12px)]">
-        {lines.map((line, row) => {
-          const gold = line.startsWith("*");
-          const small = line.startsWith("-");
-          return (
-            <p
-              key={row}
-              className={`text-center font-board font-bold uppercase leading-[1.55] tracking-[0.12em] ${
-                small ? "text-[clamp(14px,1.9vw,24px)] text-[#e8dbf1]" : "text-[clamp(19px,3.1vw,40px)]"
-              } ${gold ? "text-gold" : small ? "" : "text-[#fbf8fd]"}`}
-            >
-              <BoardLine text={clean[row]} row={row} />
-            </p>
-          );
-        })}
-      </div>
-    </div>
-  );
-}
-
 export function Header({ visitUrl }: { visitUrl: string }) {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-lilac/95 backdrop-blur">

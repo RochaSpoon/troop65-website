@@ -6,6 +6,7 @@ export const settingsQuery = defineQuery(`*[_id == "settings"][0]`);
 
 export const homeQuery = defineQuery(`*[_id == "homePage"][0]{
   ...,
+  bannerImage${photo},
   heroImage${photo},
   tuesdayImage${photo},
   lairImage${photo},

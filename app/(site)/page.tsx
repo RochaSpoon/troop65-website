@@ -1,15 +1,21 @@
 import Link from "next/link";
 import { Photo } from "@/components/Photo";
-import { Eyebrow, Figure, LetterBoard, VisitButton, container, heading } from "@/components/site";
+import { Eyebrow, Figure, VisitButton, container, heading } from "@/components/site";
+import type { Photo as PhotoType } from "@/lib/types";
 import { getHome, getOurSpace, getSettings } from "@/lib/content";
 
-/** Used until the webmaster fills in the letter board in Studio. */
-const DEFAULT_BOARD = ["Welcome to", "*Troop 65", "-The Purple Plague", "1st & 3rd Tuesdays", "6:30 to 8:30 pm", "-Downstairs · New scouts welcome"];
+/** The troop banner, used until a different one is set in Studio. */
+const DEFAULT_BANNER: PhotoType = {
+  src: "/photos/troop65-banner.jpg",
+  alt: "Troop 65 banner: the troop in uniform on the beach at sunset in Long Beach, with the words Troop 65, Adventure, Leadership, Service, Long Beach, Since 1937, t65.org",
+  w: 2560,
+  h: 992,
+};
 
 export default async function HomePage() {
   const [home, settings, space] = await Promise.all([getHome(), getSettings(), getOurSpace()]);
   const trips = home.trips ?? [];
-  const board = home.boardLines?.filter(Boolean).length ? home.boardLines.filter(Boolean) : DEFAULT_BOARD;
+  const banner = home.bannerImage?.src ? home.bannerImage : DEFAULT_BANNER;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -34,21 +40,22 @@ export default async function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* Hero: copy on the left, the letter board on the right. */}
-      <section className={`${container} grid items-center gap-10 pb-16 pt-12 md:pb-20 md:pt-16 lg:grid-cols-12 lg:gap-14`}>
-        <div className="lg:col-span-5">
-          {home.heroKicker && <Eyebrow>{home.heroKicker}</Eyebrow>}
-          <h1 className={`${heading} mt-3 text-[44px] md:text-[76px]`}>{home.heroHeading}</h1>
-          {home.heroText && <p className="mt-5 max-w-[36ch] text-[20px] leading-relaxed text-muted">{home.heroText}</p>}
-          <VisitButton url={settings.visitFormUrl} className="mt-7" />
-        </div>
-        <LetterBoard lines={board} className="lg:col-span-7" />
-      </section>
-
-      {/* Big group photo under the board. */}
-      <div className={container}>
-        <Figure photo={home.heroImage} sizes="(min-width: 1240px) 1160px, 100vw" aspect="aspect-[4/3] md:aspect-[21/9]" preload />
+      {/* Banner: shown whole, never cropped, since the lettering runs to its edges. */}
+      <div className={`${container} pt-6 md:pt-8`}>
+        <Figure photo={banner} sizes="(min-width: 1240px) 1160px, 100vw" whole preload />
       </div>
+
+      {/* Hero copy under the banner. */}
+      <section className={`${container} grid gap-6 pb-4 pt-10 md:grid-cols-12 md:items-end md:gap-10 md:pt-14`}>
+        <div className="md:col-span-7">
+          {home.heroKicker && <Eyebrow>{home.heroKicker}</Eyebrow>}
+          <h1 className={`${heading} mt-3 text-[40px] md:text-[64px]`}>{home.heroHeading}</h1>
+        </div>
+        <div className="md:col-span-5">
+          {home.heroText && <p className="max-w-[40ch] text-[19px] leading-relaxed text-muted">{home.heroText}</p>}
+          <VisitButton url={settings.visitFormUrl} className="mt-6" />
+        </div>
+      </section>
 
       {/* Numbers */}
       {!!home.facts?.length && (
