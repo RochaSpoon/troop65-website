@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Eyebrow, Figure, PageHeader, Paragraphs, VisitButton, container, heading } from "@/components/site";
+import { EmailButton, Eyebrow, Figure, PageHeader, Paragraphs, VisitButton, container, heading } from "@/components/site";
 import { getJoin, getSettings } from "@/lib/content";
 
 export const metadata: Metadata = {
@@ -21,7 +21,10 @@ export default async function JoinPage() {
   return (
     <>
       <PageHeader eyebrow="Join" title={page.heading} intro={page.intro}>
-        <VisitButton url={settings.visitFormUrl} className="mt-6" />
+        <div className="mt-6 flex flex-wrap gap-3">
+          <VisitButton url={settings.visitFormUrl} />
+          <EmailButton url={settings.emailListUrl} />
+        </div>
       </PageHeader>
 
       {page.heroImage?.src && (
@@ -70,15 +73,13 @@ export default async function JoinPage() {
             <Paragraphs text={page.signUpText} className="mt-4 max-w-[48ch] text-[19px] leading-relaxed text-white/90" />
           </div>
           <div className="flex flex-col items-start gap-4 md:col-span-5">
-            <VisitButton url={settings.visitFormUrl} tone="gold" />
+            <div className="flex flex-wrap gap-3">
+              <VisitButton url={settings.visitFormUrl} tone="gold" />
+              <EmailButton url={settings.emailListUrl} tone="white" />
+            </div>
             {settings.beAScoutUrl && (
               <a href={settings.beAScoutUrl} target="_blank" rel="noopener noreferrer" className="font-bold underline decoration-2 underline-offset-4 hover:text-gold">
                 Sign up on BeAScout
-              </a>
-            )}
-            {settings.emailListUrl && (
-              <a href={settings.emailListUrl} className="font-bold underline decoration-2 underline-offset-4 hover:text-gold">
-                Get troop emails
               </a>
             )}
           </div>

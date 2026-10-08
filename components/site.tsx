@@ -97,6 +97,24 @@ export function VisitButton({ url, className = "", tone = "purple" }: { url: str
   );
 }
 
+/** Second button next to "Visit a meeting": sign up for the troop email list. */
+export function EmailButton({ url, className = "", tone = "ink" }: { url?: string; className?: string; tone?: "ink" | "white" }) {
+  if (!url) return null;
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`inline-flex items-center justify-center rounded-full border-2 px-6 py-3 text-[16px] font-extrabold transition-colors ${
+        tone === "white" ? "border-white text-white hover:bg-white hover:text-purple" : "border-ink text-ink hover:bg-ink hover:text-white"
+      } ${className}`}
+    >
+      Get troop emails
+      <span className="sr-only">(opens the sign-up page in a new tab)</span>
+    </a>
+  );
+}
+
 export function Header({ visitUrl }: { visitUrl: string }) {
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-lilac/95 backdrop-blur">
