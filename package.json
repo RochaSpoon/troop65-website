@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "import-content": "node scripts/import-to-sanity.mjs"
+    "import-content": "node scripts/import-to-sanity.mjs",
+    "update-our-space": "node scripts/update-our-space.mjs"
   },
   "dependencies": {
     "@sanity/image-url": "^2.1.1",

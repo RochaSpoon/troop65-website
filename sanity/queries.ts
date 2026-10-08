@@ -23,7 +23,7 @@ export const sectionsPageQuery = defineQuery(`*[_id == $id][0]{
 export const ourSpaceQuery = defineQuery(`*[_id == "ourSpacePage"][0]{
   ...,
   heroImage${photo},
-  rooms[]{ ..., image${photo} }
+  rooms[]{ ..., image${photo}, gallery[]${photo} }
 }`);
 
 export const leadershipQuery = defineQuery(`*[_id == "leadershipPage"][0]{

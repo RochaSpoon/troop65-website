@@ -75,6 +75,8 @@ This uploads every photo and creates all the pages, officers, links, and announc
 
 Then delete the `import` token in Sanity.
 
+`npm run update-our-space` (same two variables) is a one-time update for a project imported before October 2026. It removes the Chapel, merges the Parent meeting room and Conference room, and uploads all 19 Eagle Lair panels into the Eagle Lair room. It leaves other Studio edits alone and is safe to run twice.
+
 ### 4. Connect the publish webhook
 
 1. In **sanity.io/manage**, open the project, then **API > Webhooks > Create webhook**.

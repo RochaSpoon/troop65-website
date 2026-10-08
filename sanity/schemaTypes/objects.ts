@@ -86,6 +86,14 @@ export const room = defineType({
     defineField({ name: "name", title: "Room name", type: "string", validation: (r) => r.required() }),
     defineField({ name: "text", title: "About this room", type: "text", rows: 3 }),
     defineField({ name: "image", title: "Photo", type: "photo", description: "Leave empty and the site shows a photo-needed box." }),
+    defineField({
+      name: "gallery",
+      title: "More photos",
+      type: "array",
+      of: [{ type: "photo" }],
+      options: { layout: "grid" },
+      description: "Extra photos shown when someone opens this room, like the Eagle Lair panels. Drag to change the order.",
+    }),
   ],
   preview: { select: { title: "name", media: "image" } },
 });

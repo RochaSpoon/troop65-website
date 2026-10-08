@@ -59,6 +59,8 @@ Photos are on every page: the big top photos, trip photos, room photos, officer 
 4. Drag photos to change the order. The **first photo** shows big. The rest show small underneath.
 5. Describe each photo, then click **Publish**.
 
+**Rooms on the Our space page:** each room opens and closes when a visitor taps it. To change one, open **Our space page**, then click the room under **Rooms**. **Photo** is the big one. **More photos** are the smaller ones underneath, like the Eagle Lair panels. Drag to reorder, describe each one, then click **Publish**. When a new Eagle Lair panel goes up, add its photo to the end of **More photos**.
+
 **Faces cut off?** Click the photo, then click the **crop icon**. Drag the circle onto the most important part (usually faces). The site keeps that spot in view.
 
 Only use real photos of our troop. No pictures from the internet.
